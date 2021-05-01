@@ -1,0 +1,112 @@
+.flexSwitch {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.flexSwitch input {
+    display: none;
+}
+
+.flexSwitchText {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-transform: none;
+    font-size: initial;
+    margin: 0;
+    font-weight: normal;
+}
+
+.flexSwitchText::before {
+    content: "";
+    line-height: 1;
+    display: block;
+    background-color: #B07650;
+    border-radius: 100px;
+    min-width: 40px;
+    height: 20px;
+    margin-right: 7px;
+    transition: 0.5s;
+}
+
+.flexSwitchText::after {
+    content: "";
+    display: block;
+    background-color: #FFF;
+    border-radius: 100px;
+    min-width: 14px;
+    height: 14px;
+    position: absolute;
+    left: 3px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.5s;
+}
+
+.flexSwitch input:checked ~ .flexSwitchText::before {
+    background-color: #ABD870;
+}
+
+.flexSwitch input:checked ~ .flexSwitchText::after {
+    left: 23px;
+}
+
+.flexSwitch.reverse .flexSwitchText {
+    flex-direction: row-reverse;
+}
+
+.flexSwitch.reverse .flexSwitchText::before {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.flexSwitch.reverse .flexSwitchText::after {
+    left: unset;
+    right: 3px;
+}
+
+.flexSwitch.reverse input:checked ~ .flexSwitchText::after {
+    left: unset;
+    right: 23px;
+}
+
+.flexSwitch.big .flexSwitchText::before {
+    min-width: 80px;
+    height: 40px;
+}
+
+.flexSwitch.big .flexSwitchText::after {
+    min-width: 34px;
+    height: 34px;
+}
+
+.flexSwitch.big input:checked ~ .flexSwitchText::after {
+    left: 43px;
+}
+
+.flexSwitch.big.reverse input:checked ~ .flexSwitchText::after {
+    left: unset;
+    right: 43px;
+}
+
+.flexSwitch.medium .flexSwitchText::before {
+    min-width: 60px;
+    height: 30px;
+}
+
+.flexSwitch.medium .flexSwitchText::after {
+    min-width: 24px;
+    height: 24px;
+}
+
+.flexSwitch.medium input:checked ~ .flexSwitchText::after {
+    left: 33px;
+}
+
+.flexSwitch.medium.reverse input:checked ~ .flexSwitchText::after {
+    left: unset;
+    right: 33px;
+}

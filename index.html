@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="flex-switch.css">
+    <title>Emily´s Portfolio</title>
+</head>
+<body data-setlanguage="pt"> 
+    <!-- TITLE --> 
+    <div class="boxIntro">
+        <div class="boxTitle">
+            <H1> 
+                <span data-language="pt">
+                    Portfólio da Emily 
+                </span>   
+                <span data-language="en">
+                    Emily's Portfolio
+                </span> 
+            </H1>
+            <p>
+                <span data-language="pt">
+                    Seja bem vindo a minha vida!
+                </span>   
+                <span data-language="en">
+                   Welcome to my life.
+                </span> 
+            </p>
+        </div>    
+
+        <label class="flexSwitch">
+            <span class="pt">pt</span> <!-- span, texto ao lado do outro. --> 
+            <input type="checkbox" id="checkBoxLanguage" onchange="changeLanguage()"> <!--O onchange chama a função changeLanguage toda vez que o checkbox for marcado/desmarcado.-->
+            <span class="flexSwitchText">en</span> 
+        </label>
+    
+    </div>
+
+    <!-- CONTENT --> 
+    <div class="profile"> 
+        <div class="profileTxt">
+            <h3> 
+                <span data-language="pt">
+                    Perfil
+                </span>   
+                <span data-language="en">
+                    Profile
+                </span> 
+            </h3>
+            <p> Emily Gabriela Tsen <br>
+                Marília-SP | BR <br>
+            </p>
+            <a href="#"> emilygabrielat@gmail.com </a> <br>
+            <a href="#"> instagram </a> <br>
+            <a href="#"> github </a> <br>
+            <a href="#"> linkedin </a>
+        </div>
+        <img src="/img/profileImg.jpeg" alt="my picture">
+    </div>
+
+    <script> //document.querySelector seleciona um elemento na página.
+        function changeLanguage() {
+           if(document.querySelector('#checkBoxLanguage').checked == true){ 
+               document.querySelector('body').dataset.setlanguage='en' // .dataset.setlanguage altera o atributo data-setlanguage do elemento body.
+           } else {
+            document.querySelector('body').dataset.setlanguage='pt'
+           }
+        }
+    </script>
+</body>
+</html>

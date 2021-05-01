@@ -1,0 +1,85 @@
+@font-face {
+    font-family: "Bigilla";
+    src: url("fonts/Bigilla.otf");
+}
+
+@font-face {
+    font-family: "Bigilla";
+    src: url("fonts/Bigilla-Bold.otf");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Cigra";
+    src: url("fonts/cigra.otf");
+}
+
+*{
+    box-sizing: border-box; /*manter as medidas*/
+    font-family: 'Times New Roman', Times, serif;
+    color: #000;
+}
+
+body{
+    min-height:100vh; /* tamanho mínimo da tela do usuário */
+    margin: 0;
+    display:flex;
+    flex-direction: column;
+}
+
+.boxIntro{
+    display: flex;
+    flex-direction: column;
+    height: 100vh; 
+    justify-content: center; /*alinhamento vertical (coluna nesse caso)*/
+    align-items: center; /*alinhamento horizontal*/
+    text-align: center;
+    background-color: #efecff;
+    padding: 20px;
+}
+
+.boxTitle H1{
+    font-family: Cigra;
+    font-size: 456%;
+    margin: 0;
+    font-weight: normal;
+}
+
+.boxTitle p{
+    margin: 0;
+    font-size: 234%;
+}
+
+.flexSwitch{
+    transform: translateY(-49vh);
+}
+
+.flexSwitch .pt{
+    margin-right: 7px;
+}
+
+
+@media screen and (max-width: 600px) /*passou de 600 não funcionará*/ {
+    .boxTitle H1{
+        font-size: 209%;
+    }
+    .boxTitle p{
+        font-size: 108%;
+    }
+    .flexSwitch{
+        transform: translateY(-42vh);
+    }
+  }
+
+*[data-language]{ /*Ocultando tudo que tem data-language.*/
+    display:none;
+}
+
+body[data-setlanguage='pt'] *[data-language='pt']{ /*Quando o data-setlanguage do body for pt, exibe todos os elementos com atributo data-language='pt'*/
+    display:inline;
+}
+
+body[data-setlanguage='en'] *[data-language='en']{
+    display:inline;
+}
+
