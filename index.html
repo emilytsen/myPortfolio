@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,66 +9,111 @@
     <link rel="stylesheet" href="flex-switch.css">
     <title>Emily´s Portfolio</title>
 </head>
-<body data-setlanguage="pt"> 
-    <!-- TITLE --> 
+
+<body data-setlanguage="pt">
+    <!-- TITLE -->
     <div class="boxIntro">
         <div class="boxTitle">
-            <H1> 
+            <H1>
                 <span data-language="pt">
-                    Portfólio da Emily 
-                </span>   
+                    Portfólio da Emily
+                </span>
                 <span data-language="en">
                     Emily's Portfolio
-                </span> 
+                </span>
             </H1>
             <p>
                 <span data-language="pt">
                     Seja bem vindo a minha vida!
-                </span>   
+                </span>
                 <span data-language="en">
-                   Welcome to my life.
-                </span> 
+                    Welcome to my life.
+                </span>
             </p>
-        </div>    
+        </div>
 
         <label class="flexSwitch">
-            <span class="pt">pt</span> <!-- span, texto ao lado do outro. --> 
-            <input type="checkbox" id="checkBoxLanguage" onchange="changeLanguage()"> <!--O onchange chama a função changeLanguage toda vez que o checkbox for marcado/desmarcado.-->
-            <span class="flexSwitchText">en</span> 
+            <span class="pt">pt</span> <!-- span, texto ao lado do outro. -->
+            <input type="checkbox" id="checkBoxLanguage" onchange="changeLanguage()">
+            <!--O onchange chama a função changeLanguage toda vez que o checkbox for marcado/desmarcado.-->
+            <span class="flexSwitchText">en</span>
         </label>
-    
+
     </div>
 
-    <!-- CONTENT --> 
-    <div class="profile"> 
-        <div class="profileTxt">
-            <h3> 
-                <span data-language="pt">
-                    Perfil
-                </span>   
-                <span data-language="en">
-                    Profile
-                </span> 
-            </h3>
-            <p> Emily Gabriela Tsen <br>
-                Marília-SP | BR <br>
-            </p>
-            <a href="#"> emilygabrielat@gmail.com </a> <br>
-            <a href="#"> instagram </a> <br>
-            <a href="#"> github </a> <br>
-            <a href="#"> linkedin </a>
+    <!-- CONTENT -->
+    <div class="content">
+        <div class="lineContent">
+            <div class="boxContent txt">
+                <h3>
+                    <span data-language="pt">
+                        Perfil
+                    </span>
+                    <span data-language="en">
+                        Profile
+                    </span>
+                </h3>
+                <p> Emily Gabriela Tsen <br>
+                    Marília-SP | BR <br>
+                </p>
+                <a href="#"> emilygabrielat@gmail.com </a> <br>
+                <a href="#"> instagram </a> <br>
+                <a href="#"> github </a> <br>
+                <a href="#"> linkedin </a>
+            </div>
+            <div class="boxContent img">
+                <img src="img/img1.png" alt="">
+            </div>
+            <div class="boxContent icon i1">
+                <img src="img/img2.png" alt="">
+            </div>
+            <div class="boxContent empty">
+
+            </div>
         </div>
-        <img src="/img/profileImg.jpeg" alt="my picture">
+
+
+        <div class="lineContent invert">
+            <div class="boxContent txt">
+                <h3>
+                    <span data-language="pt">
+                        Perfil
+                    </span>
+                    <span data-language="en">
+                        Profile
+                    </span>
+                </h3>
+                <ul>
+                    <li>Ensino médio | <span> SENAI Shunji Nishimura </span> </li>
+                    <li>Ensino médio | <span> SENAI Shunji Nishimura </span> </li>
+                    <li>Ensino médio | <span> SENAI Shunji Nishimura </span> </li>
+                    <li>Ensino médio | <span> SENAI Shunji Nishimura </span> </li>
+                </ul>
+            </div>
+            <div class="boxContent img">
+                <img src="img/img4.png" alt="">
+            </div>
+            <div class="boxContent icon i2">
+                <img src="img/img3.png" alt="">
+            </div>
+            <div class="boxContent empty">
+
+            </div>
+        </div>
     </div>
 
-    <script> //document.querySelector seleciona um elemento na página.
+
+    <script>
+        //document.querySelector seleciona um elemento na página.
         function changeLanguage() {
-           if(document.querySelector('#checkBoxLanguage').checked == true){ 
-               document.querySelector('body').dataset.setlanguage='en' // .dataset.setlanguage altera o atributo data-setlanguage do elemento body.
-           } else {
-            document.querySelector('body').dataset.setlanguage='pt'
-           }
+            if (document.querySelector('#checkBoxLanguage').checked == true) {
+                document.querySelector('body').dataset.setlanguage =
+                    'en' // .dataset.setlanguage altera o atributo data-setlanguage do elemento body.
+            } else {
+                document.querySelector('body').dataset.setlanguage = 'pt'
+            }
         }
     </script>
 </body>
+
 </html>

@@ -14,72 +14,164 @@
     src: url("fonts/cigra.otf");
 }
 
-*{
-    box-sizing: border-box; /*manter as medidas*/
-    font-family: 'Times New Roman', Times, serif;
+* {
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /*manter as medidas*/
+    font-family: inherit;
     color: #000;
+    font-size: inherit;
 }
 
-body{
-    min-height:100vh; /* tamanho mínimo da tela do usuário */
+body {
+    min-height: 100vh;
+    /* tamanho mínimo da tela do usuário */
     margin: 0;
-    display:flex;
-    flex-direction: column;
-}
-
-.boxIntro{
     display: flex;
     flex-direction: column;
-    height: 100vh; 
-    justify-content: center; /*alinhamento vertical (coluna nesse caso)*/
-    align-items: center; /*alinhamento horizontal*/
+    font-size: 100%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.boxIntro {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    /*alinhamento vertical (coluna nesse caso)*/
+    align-items: center;
+    /*alinhamento horizontal*/
     text-align: center;
     background-color: #efecff;
     padding: 20px;
+    font-family: "Cigra";
 }
 
-.boxTitle H1{
-    font-family: Cigra;
+.boxTitle H1 {
     font-size: 456%;
     margin: 0;
     font-weight: normal;
 }
 
-.boxTitle p{
+.boxTitle p {
     margin: 0;
     font-size: 234%;
 }
 
-.flexSwitch{
+.flexSwitch {
     transform: translateY(-49vh);
 }
 
-.flexSwitch .pt{
+.flexSwitch .pt {
     margin-right: 7px;
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-@media screen and (max-width: 600px) /*passou de 600 não funcionará*/ {
-    .boxTitle H1{
+.lineContent {
+    display: flex;
+    flex-direction: row;
+}
+
+.lineContent.invert{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.boxContent {
+    width: 267px;
+    height: 267px;
+}
+
+.boxContent.txt{
+    
+    font-size: 110%;
+    line-height: 146%;
+    text-align: right;
+    padding: 20px;
+}
+
+.lineContent.invert .boxContent.txt{
+    text-align: left;
+}
+
+.boxContent.txt h3{
+    font-family: 'Cigra';
+    font-size: 222%;
+    margin-bottom: 8px;
+    letter-spacing: 3px;
+}
+
+ul{
+    padding-left: 20px;
+}
+
+
+.boxContent.img{
+
+}
+
+.boxContent.icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxContent.icon.i1{
+    background-color: #D0B997;
+}
+
+.boxContent.icon.i2{
+    background-color: #B6CED8;
+}
+
+
+.boxContent.empty{
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px)
+
+/*passou de 600 não funcionará*/
+    {
+    .boxTitle H1 {
         font-size: 209%;
     }
-    .boxTitle p{
+
+    .boxTitle p {
         font-size: 108%;
     }
-    .flexSwitch{
+
+    .flexSwitch {
         transform: translateY(-42vh);
     }
-  }
-
-*[data-language]{ /*Ocultando tudo que tem data-language.*/
-    display:none;
 }
 
-body[data-setlanguage='pt'] *[data-language='pt']{ /*Quando o data-setlanguage do body for pt, exibe todos os elementos com atributo data-language='pt'*/
-    display:inline;
+*[data-language] {
+    /*Ocultando tudo que tem data-language.*/
+    display: none;
 }
 
-body[data-setlanguage='en'] *[data-language='en']{
-    display:inline;
+body[data-setlanguage='pt'] *[data-language='pt'] {
+    /*Quando o data-setlanguage do body for pt, exibe todos os elementos com atributo data-language='pt'*/
+    display: inline;
 }
 
+body[data-setlanguage='en'] *[data-language='en'] {
+    display: inline;
+}
