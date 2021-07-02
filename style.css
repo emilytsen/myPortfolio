@@ -32,6 +32,7 @@ body {
     flex-direction: column;
     font-size: 100%;
     font-family: 'Times New Roman', Times, serif;
+    background-color: #efecff;
 }
 
 .boxIntro {
@@ -43,7 +44,6 @@ body {
     align-items: center;
     /*alinhamento horizontal*/
     text-align: center;
-    background-color: #efecff;
     padding: 20px;
     font-family: "Cigra";
 }
@@ -130,6 +130,13 @@ ul{
     background-color: #B6CED8;
 }
 
+.boxContent.icon.i3{
+    background-color: #ABD870;
+}
+
+.boxContent.icon.i4{
+    background-color: #B07650;
+}
 
 .boxContent.empty{
 
