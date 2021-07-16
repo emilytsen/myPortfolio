@@ -90,7 +90,7 @@ body {
 
 .boxContent.txt {
 
-    font-size: 110%;
+    font-size: 105%;
     line-height: 146%;
     text-align: right;
     padding: 20px;
@@ -241,8 +241,8 @@ ul {
     }
 
     .boxContent.txt {
-        text-align: justify;
-        font-size: 100%;
+        text-align:left; 
+        font-size: 98%;
         padding: 25px;
         border-radius: 20px 20px 0px 0px;
     }
