@@ -2,6 +2,8 @@
     cursor: pointer;
     display: flex;
     flex-direction: row;
+    position: absolute;
+    margin-top: 100px;
    
 }
 
@@ -47,7 +49,7 @@
 }
 
 .flexSwitch input:checked ~ .flexSwitchText::before {
-    background-color: #b6b34b;
+    background-color: #f4e47d;
 }
 
 .flexSwitch input:checked ~ .flexSwitchText::after {
@@ -109,4 +111,10 @@
 .flexSwitch.medium.reverse input:checked ~ .flexSwitchText::after {
     left: unset;
     right: 33px;
+}
+
+@media screen and (max-width: 600px){
+    .flexSwitch {
+        margin-top: 10px;
+    }
 }

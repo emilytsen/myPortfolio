@@ -32,7 +32,7 @@ body {
     flex-direction: column;
     font-size: 100%;
     font-family: 'Times New Roman', Times, serif;
-    background-color:snow;
+    background-color: snow;
 }
 
 .boxIntro {
@@ -59,6 +59,48 @@ body {
     font-size: 234%;
 }
 
+.hamburger {
+    display: inline-block;
+    background-color: transparent;
+    border: 0;
+    height: 3rem;
+    margin-top: 100px;
+}
+
+.hamburgerBox {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* position: relative; */
+    width: 2.5rem;
+    height: 1.2rem;
+    /* display: block; */
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+.hamburgerBox .line {
+    display: block;
+    background-color: #000;
+    width: 1.7rem;
+    height: 1.6px;
+    transition: .5s ease-out;
+    transform-origin: center;
+    /* position: absolute; */
+    left: 0;
+    transition-delay: .2s;
+    margin: 3px 0;
+}
+
+.hamburgerBox:hover {
+    transform: rotate(180deg);
+    /* transform: translateZ(0) rotate(0deg) scale(1); */
+}
+
+
+
 .flexSwitch {
     transform: translateY(-49vh);
 }
@@ -71,6 +113,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 15%;
 }
 
 .lineContent {
@@ -96,14 +139,14 @@ body {
     padding: 20px;
 }
 
-.web{
+.web {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
 }
 
-.web img{
+.web img {
     width: 21px;
     margin: 10px 0px 0px 10px;
 }
@@ -140,7 +183,7 @@ ul {
 }
 
 .boxContent.icon.i3 {
-    background-color: #b6b34b;
+    background-color: #98bf81;
 }
 
 .boxContent.icon.i4 {
@@ -241,7 +284,7 @@ ul {
     }
 
     .boxContent.txt {
-        text-align:left; 
+        text-align: left;
         font-size: 98%;
         padding: 25px;
         border-radius: 20px 20px 0px 0px;
@@ -256,15 +299,31 @@ ul {
     }
 
     .boxContent.txt.t2 {
-        background-color: #ee8750;
+        background-color: #abd6e4;
     }
 
     .boxContent.txt.t3 {
-        background-color: #b6b34b;
+        background-color: #98bf81;
     }
 
     .boxContent.txt.t4 {
         background-color: #abd6e4;
+    }
+
+    .boxContent.icon.i1 {
+        background-color: #98bf81;
+    }
+
+    .boxContent.icon.i2 {
+        background-color: #f4e47d;
+    }
+
+    .boxContent.icon.i3 {
+        background-color: #ee8750;
+    }
+
+    .boxContent.icon.i4 {
+        background-color: #ee8750;
     }
 
     .flag img {
@@ -301,15 +360,15 @@ ul {
         font-size: 160%;
     }
 
-    .web{
+    .web {
         justify-content: flex-start;
-        }
-    
-    .web img{
+    }
+
+    .web img {
         width: 21px;
         margin: 10px 10px 0px 0px;
     }
-    
+
 }
 
 *[data-language] {
