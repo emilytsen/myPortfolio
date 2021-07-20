@@ -32,7 +32,7 @@ body {
     flex-direction: column;
     font-size: 100%;
     font-family: 'Times New Roman', Times, serif;
-    background-color: #efecff;
+    background-color:snow;
 }
 
 .boxIntro {
@@ -132,19 +132,19 @@ ul {
 }
 
 .boxContent.icon.i1 {
-    background-color: #D0B997;
+    background-color: #f4e47d;
 }
 
 .boxContent.icon.i2 {
-    background-color: #B6CED8;
+    background-color: #ee8750;
 }
 
 .boxContent.icon.i3 {
-    background-color: #ABD870;
+    background-color: #b6b34b;
 }
 
 .boxContent.icon.i4 {
-    background-color: #B07650;
+    background-color: #abd6e4;
 }
 
 
@@ -189,7 +189,7 @@ ul {
     align-items: center;
     justify-content: center;
     height: 380px;
-    background-color: #B6CED8;
+    background-color: #abd6e4;
     margin-top: 250px;
     text-align: center;
 }
@@ -252,19 +252,19 @@ ul {
     }
 
     .boxContent.txt.t1 {
-        background-color: #B6CED8;
+        background-color: #f4e47d;
     }
 
     .boxContent.txt.t2 {
-        background-color: #B07650;
+        background-color: #ee8750;
     }
 
     .boxContent.txt.t3 {
-        background-color: #D0B997;
+        background-color: #b6b34b;
     }
 
     .boxContent.txt.t4 {
-        background-color: #ABD870;
+        background-color: #abd6e4;
     }
 
     .flag img {
