@@ -59,51 +59,44 @@ body {
     font-size: 234%;
 }
 
-.hamburger {
-    display: inline-block;
-    background-color: transparent;
-    border: 0;
-    height: 3rem;
-    margin-top: 100px;
-}
-
-.hamburgerBox {
-
+.webHeader{
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    /* position: relative; */
-    width: 2.5rem;
-    height: 1.2rem;
-    /* display: block; */
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    position: fixed;
+    width: 100%;
+}
+
+.lines{
     cursor: pointer;
-    transition: transform .3s;
+    width: max-content;
+    padding: 10px;
 }
 
-.hamburgerBox .line {
+.lines::before, .lines::after{
+    content: "";
     display: block;
+    width: 30px;
+    height: 2px;
     background-color: #000;
-    width: 1.7rem;
-    height: 1.6px;
-    transition: .5s ease-out;
-    transform-origin: center;
-    /* position: absolute; */
-    left: 0;
-    transition-delay: .2s;
-    margin: 3px 0;
+    margin: 8px;
+    transition: 1s;
 }
 
-.hamburgerBox:hover {
+.lines:hover::after, .lines:hover::before{
     transform: rotate(180deg);
-    /* transform: translateZ(0) rotate(0deg) scale(1); */
 }
 
-
-
-.flexSwitch {
-    transform: translateY(-49vh);
+.lines.x::after{
+    transform: rotate(45deg);
+    margin: -2px auto;
 }
+.lines.x::before{
+    transform: rotate(-45deg);
+    margin: -2px auto;
+}
+
 
 .flexSwitch .pt {
     margin-right: 7px;
@@ -267,16 +260,19 @@ ul {
 
 /*passou de 600 não funcionará*/
     {
+
+    .webHeader{
+        background: linear-gradient(
+            180deg
+            , #ffffffd1, transparent);
+    }
+
     .boxTitle H1 {
         font-size: 209%;
     }
 
     .boxTitle p {
         font-size: 108%;
-    }
-
-    .flexSwitch {
-        transform: translateY(-42vh);
     }
 
     .lineContent {

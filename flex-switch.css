@@ -2,9 +2,7 @@
     cursor: pointer;
     display: flex;
     flex-direction: row;
-    position: absolute;
-    margin-top: 100px;
-   
+    align-items: center;
 }
 
 .flexSwitch input {

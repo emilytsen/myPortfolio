@@ -12,6 +12,19 @@
 
 <body data-setlanguage="pt">
     <!-- TITLE -->
+    <header class="webHeader">
+
+        <label class="flexSwitch">
+            <span class="pt">pt</span> <!-- span, texto ao lado do outro. -->
+            <input type="checkbox" id="checkBoxLanguage" onchange="changeLanguage()">
+            <!--O onchange chama a função changeLanguage toda vez que o checkbox for marcado/desmarcado.-->
+            <span class="flexSwitchText">en</span>
+        </label>
+
+        <span class="lines" onclick="cross(event)"></span>
+
+    </header>
+
     <div class="boxIntro">
         <div class="boxTitle">
             <H1>
@@ -31,24 +44,10 @@
                 </span>
             </p>
 
-            <div class="lines">
-                <button class="hamburger">
-                    <span class="hamburgerBox">
-                        <span class="line line1"></span>
-                        <span class="line line2"></span>
-                        <!-- <span class="line line3"></span> -->
-                    </span>
-                </button>
-            </div>
+         
         </div>
 
-        <label class="flexSwitch">
-            <span class="pt">pt</span> <!-- span, texto ao lado do outro. -->
-            <input type="checkbox" id="checkBoxLanguage" onchange="changeLanguage()">
-            <!--O onchange chama a função changeLanguage toda vez que o checkbox for marcado/desmarcado.-->
-            <span class="flexSwitchText">en</span>
-        </label>
-
+      
     </div>
 
     <!-- CONTENT -->
@@ -244,7 +243,13 @@
         </h1>
     </div>
 
+
     <script>
+
+        function cross(event){
+            event.target.classList.toggle("x");
+        }
+
         //document.querySelector seleciona um elemento na página.
         function changeLanguage() {
             if (document.querySelector('#checkBoxLanguage').checked == true) {
