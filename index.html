@@ -21,9 +21,15 @@
             <span class="flexSwitchText">en</span>
         </label>
 
-        <span class="lines" onclick="cross(event)"></span>
+        <span class="lines" onclick="toggleMenu(event)"></span>
 
     </header>
+
+    <nav class="menu">
+        <a href="#">Crafts</a>
+        <a href="#">Jesus Mold</a>
+        <a href="#">Projects</a>
+    </nav>
 
     <div class="boxIntro">
         <div class="boxTitle">
@@ -224,7 +230,7 @@
     <div class="footer">
         <h3>
             <span data-language="pt">
-                Meu proósito é fazer a diferença e impactar vidas por onde for através do amor.</span>
+                Meu propósito é fazer a diferença e impactar vidas por onde for através do amor.</span>
             <span data-language="en">
                 My purpose is to make a difference and impact lives wherever I go through love.</span>
         </h3>
@@ -246,9 +252,12 @@
 
     <script>
 
-        function cross(event){
+        function toggleMenu(event){
             event.target.classList.toggle("x");
+            document.querySelector('.menu').classList.toggle("show");
         }
+        //classlist: através dela se gerencia as classes de um elemento. (adiciona, remove, alterna...)
+        //toggle: função que alterna classe "x" do elemento que foi clicado. (tirar e colocar)
 
         //document.querySelector seleciona um elemento na página.
         function changeLanguage() {
