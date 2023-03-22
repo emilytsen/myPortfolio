@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/flex-switch.css">
+    <link rel="stylesheet" href="assets/volunteer.css">
+    <title>Document</title>
+</head>
+
+<body data-setlanguage="pt">
+
+    <header class="webHeader">
+
+        <label class="flexSwitch">
+            <span class="pt">pt</span> <!-- span, texto ao lado do outro. -->
+            <input type="checkbox" id="checkBoxLanguage" onchange="changeLanguage()">
+            <!--O onchange chama a função changeLanguage toda vez que o checkbox for marcado/desmarcado.-->
+            <span class="flexSwitchText">en</span>
+        </label>
+
+        <span class="lines" onclick="toggleMenu(event)"></span>
+
+    </header>
+
+    <nav class="menu">
+        <a href="index.html">Menu</a>
+        <a href="crafts.html">Crafts</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="ceramic">
+        <div class="imgv">
+            <img src="img/imgv1.png" alt="" class="i1">
+        </div>
+
+        <div class="overlapText">
+            <h3>
+                <span data-language="pt">
+                    Cerâmica
+                </span>
+                <span data-language="en">
+                    Ceramic
+                </span>
+            </h3>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <h3>
+            <span data-language="pt">
+                Meu propósito é fazer a diferença e impactar vidas por onde for através do amor.</span>
+            <span data-language="en">
+                My purpose is to make a difference and impact lives wherever I go through love.</span>
+        </h3>
+
+        <h5>
+            <span data-language="pt">
+                Ame a Deus, ame a todos.
+            </span>
+            <span data-language="en">
+                Love God, love others.
+            </span>
+        </h5>
+
+        <h1>
+            岑
+        </h1>
+    </div>
+
+
+
+    <script>
+        function toggleMenu(event) {
+            event.target.classList.toggle("x");
+            document.querySelector('.menu').classList.toggle("show");
+        }
+
+        function changeLanguage() {
+            if (document.querySelector('#checkBoxLanguage').checked == true) {
+                document.querySelector('body').dataset.setlanguage =
+                    'en' // .dataset.setlanguage altera o atributo data-setlanguage do elemento body.
+            } else {
+                document.querySelector('body').dataset.setlanguage = 'pt'
+            }
+        }
+    </script>
+</body>
+
+</html>
