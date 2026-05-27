@@ -5,74 +5,347 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/flex-switch.css">
-    <link rel="stylesheet" href="assets/projects.css">
-    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/variables.css?v=2">
+    <link rel="stylesheet" href="./assets/base.css?v=2">
+    <link rel="stylesheet" href="./assets/flex-switch.css?v=2">
+    <link rel="stylesheet" href="./assets/projects.css?v=2">
+    <link rel="icon" href="./img/iconSite.png">
+    <title>Projects · Emily Tsen</title>
 </head>
 
 <body data-setlanguage="pt">
 
+    <!-- ===================== HEADER ===================== -->
     <header class="webHeader">
+        <a href="index.html" class="brand">ET ✿</a>
 
-        <label class="flexSwitch">
-            <span class="pt">pt</span> <!-- span, texto ao lado do outro. -->
-            <input type="checkbox" id="checkBoxLanguage" onchange="changeLanguage()">
-            <!--O onchange chama a função changeLanguage toda vez que o checkbox for marcado/desmarcado.-->
-            <span class="flexSwitchText">en</span>
-        </label>
-
-        <span class="lines" onclick="toggleMenu(event)"></span>
-
+        <div style="display:flex; align-items:center; gap:24px;">
+            <label class="flexSwitch">
+                <span class="pt">pt</span>
+                <input type="checkbox" id="checkBoxLanguage">
+                <span class="flexSwitchText">en</span>
+            </label>
+            <span class="lines"></span>
+        </div>
     </header>
 
+    <!-- ===================== MENU ===================== -->
     <nav class="menu">
-        <a href="index.html">Menu</a>
-        <a href="crafts.html">Crafts</a>
-        <a href="volunteer.html">Volunteer</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html"><span class="num">01</span>Home</a>
+        <a href="extras.html"><span class="num">02</span>Extras</a>
+        <a href="volunteer.html"><span class="num">03</span>Volunteer</a>
+        <a href="contact.html"><span class="num">04</span>Contact</a>
     </nav>
 
+    <!-- ===================== HERO ===================== -->
+    <section class="projects-hero">
+        <p class="eyebrow">
+            <span data-language="pt">Trabalho selecionado</span>
+            <span data-language="en">Selected work</span>
+        </p>
+        <h1>Projects</h1>
+        <p>
+            <span data-language="pt">Dados, código e curiosidade a serviço da saúde, do bem-estar e das pessoas.</span>
+            <span data-language="en">Data, code and curiosity in service of health, well-being and people.</span>
+        </p>
+    </section>
 
+    <!-- ===================== CATEGORIA 1: DADOS & SAÚDE ===================== -->
+    <section class="projects-cat">
+        <div class="container">
+            <div class="projects-cat__head reveal">
+                <h2>
+                    <span data-language="pt">Dados &amp; Saúde</span>
+                    <span data-language="en">Data &amp; Health</span>
+                </h2>
+                <span class="count">05 ·</span>
+            </div>
 
-    <div class="footer">
+            <div class="project-grid">
+                <article class="project-card project-card--feature reveal">
+                    <div class="project-card__top">
+                        <span data-language="pt">Pesquisa · Ciência de dados</span>
+                        <span data-language="en">Research · Data science</span>
+                    </div>
+                    <span class="project-card__badge">★
+                        <span data-language="pt">Aprovada · IV Encontro de Ciência de Dados</span>
+                        <span data-language="en">Accepted · IV Data Science Meeting</span>
+                    </span>
+                    <h3>
+                        <span data-language="pt">Rupturas de Menisco &amp; COVID-19</span>
+                        <span data-language="en">Meniscus Tears &amp; COVID-19</span>
+                    </h3>
+                    <p>
+                        <span data-language="pt">Análise comparativa da frequência de rupturas de menisco (CID S832) na saúde suplementar e os impactos da pandemia de COVID-19 na demanda por tratamentos ortopédicos (2019–2022).</span>
+                        <span data-language="en">Comparative analysis of meniscus tear frequency (ICD S832) in supplementary health and the COVID-19 pandemic's impact on demand for orthopedic treatments (2019–2022).</span>
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag tag--accent">Data Science</span>
+                        <span class="tag">Saúde Suplementar</span>
+                        <span class="tag">COVID-19</span>
+                        <span class="tag">Ortopedia</span>
+                    </div>
+                </article>
+
+                <a class="project-card reveal" href="https://github.com/emilytsen/ans_analysis" target="_blank" rel="noopener">
+                    <div class="project-card__top">
+                        <span data-language="pt">Big Data · Saúde</span>
+                        <span data-language="en">Big Data · Health</span>
+                        <span class="project-card__arrow">↗</span>
+                    </div>
+                    <h3>SUS &amp; ANS Analysis</h3>
+                    <p>
+                        <span data-language="pt">Análise e cruzamento de dados de mercado da saúde (SUS e ANS) para apoiar uma empresa do setor a tomar decisões assertivas sobre os próximos passos.</span>
+                        <span data-language="en">Analysis and cross-referencing of health market data (SUS and ANS) to help a healthcare company make accurate decisions about its next steps.</span>
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag tag--accent">Python</span>
+                        <span class="tag">Big Data</span>
+                        <span class="tag">SUS · ANS</span>
+                        <span class="tag">Cruzamento de dados</span>
+                    </div>
+                </a>
+
+                <a class="project-card reveal" href="https://github.com/emilytsen/cancer_analysis" target="_blank" rel="noopener">
+                    <div class="project-card__top">
+                        <span data-language="pt">Análise de dados</span>
+                        <span data-language="en">Data analysis</span>
+                        <span class="project-card__arrow">↗</span>
+                    </div>
+                    <h3>Cancer Analysis</h3>
+                    <p>
+                        <span data-language="pt">Limpeza, exploração e visualização de dados de mortalidade por câncer em diversos países, com dashboard interativo.</span>
+                        <span data-language="en">Cleaning, exploration and visualization of cancer mortality data across countries, with an interactive dashboard.</span>
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag tag--accent">Python</span>
+                        <span class="tag">Pandas</span>
+                        <span class="tag">Streamlit</span>
+                        <span class="tag">Plotly</span>
+                    </div>
+                </a>
+
+                <a class="project-card reveal" href="https://github.com/emilytsen/personal_health_analysis" target="_blank" rel="noopener">
+                    <div class="project-card__top">
+                        <span data-language="pt">Análise de dados</span>
+                        <span data-language="en">Data analysis</span>
+                        <span class="project-card__arrow">↗</span>
+                    </div>
+                    <h3>Personal Health Analysis</h3>
+                    <p>
+                        <span data-language="pt">Tratamento e análise de dados pessoais de saúde, transformando registros do dia a dia em insights de bem-estar.</span>
+                        <span data-language="en">Treatment and analysis of personal health data, turning everyday records into well-being insights.</span>
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag tag--accent">Python</span>
+                        <span class="tag">EDA</span>
+                        <span class="tag">Saúde</span>
+                    </div>
+                </a>
+
+                <a class="project-card reveal" href="https://github.com/emilytsen/Clinic-Manager" target="_blank" rel="noopener">
+                    <div class="project-card__top">
+                        <span data-language="pt">App · Saúde</span>
+                        <span data-language="en">App · Health</span>
+                        <span class="project-card__arrow">↗</span>
+                    </div>
+                    <h3>Clinic Manager</h3>
+                    <p>
+                        <span data-language="pt">Sistema para organizar pacientes, doutores e a agenda de uma clínica odontológica em poucos cliques.</span>
+                        <span data-language="en">System to organize patients, doctors and a dental clinic's schedule in just a few clicks.</span>
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag tag--accent">FastAPI</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">REST API</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CATEGORIA 2: IA & MACHINE LEARNING ===================== -->
+    <section class="projects-cat">
+        <div class="container">
+            <div class="projects-cat__head reveal">
+                <h2>
+                    <span data-language="pt">IA &amp; Machine Learning</span>
+                    <span data-language="en">AI &amp; Machine Learning</span>
+                </h2>
+                <span class="count">04 ·</span>
+            </div>
+
+            <div class="project-grid">
+                <article class="project-card project-card--feature reveal">
+                    <div class="project-card__top">
+                        <span data-language="pt">Inteligência Artificial</span>
+                        <span data-language="en">Artificial Intelligence</span>
+                    </div>
+                    <span class="project-card__badge">★ Inova Skill</span>
+                    <h3>DataCare</h3>
+                    <p>
+                        <span data-language="pt">Sistema baseado em Inteligência Artificial que gerou previsões de vendas mais precisas e ágeis para uma empresa parceira de equipamentos cirúrgicos. Desenvolvido no programa Inova Skill.</span>
+                        <span data-language="en">AI-based system that produced more accurate and agile sales forecasts for a partner company in surgical equipment. Built within the Inova Skill program.</span>
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag tag--accent">IA</span>
+                        <span class="tag">Forecasting</span>
+                        <span class="tag">Vendas</span>
+                    </div>
+                </article>
+
+                <a class="project-card reveal" href="https://github.com/emilytsen/SoloWiseAI" target="_blank" rel="noopener">
+                    <div class="project-card__top">
+                        <span data-language="pt">Deep Learning · Agro</span>
+                        <span data-language="en">Deep Learning · Agro</span>
+                        <span class="project-card__arrow">↗</span>
+                    </div>
+                    <h3>SoloWise AI</h3>
+                    <p>
+                        <span data-language="pt">Classificador de tipos de solo com rede neural — projeto de graduação unindo Big Data e agronegócio.</span>
+                        <span data-language="en">Soil-type classifier built with a neural network — graduation project bridging Big Data and agribusiness.</span>
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag tag--accent">Python</span>
+                        <span class="tag">TensorFlow</span>
+                        <span class="tag">CNN</span>
+                    </div>
+                </a>
+
+                <a class="project-card reveal" href="https://github.com/emilytsen/credit_prediction" target="_blank" rel="noopener">
+                    <div class="project-card__top">
+                        <span data-language="pt">Modelo preditivo</span>
+                        <span data-language="en">Predictive model</span>
+                        <span class="project-card__arrow">↗</span>
+                    </div>
+                    <h3>Credit Prediction</h3>
+                    <p>
+                        <span data-language="pt">Modelo de machine learning para prever a aprovação de crédito a partir de dados de clientes.</span>
+                        <span data-language="en">Machine learning model to predict credit approval from customer data.</span>
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag tag--accent">Python</span>
+                        <span class="tag">scikit-learn</span>
+                        <span class="tag">Classificação</span>
+                    </div>
+                </a>
+
+                <a class="project-card reveal" href="https://github.com/emilytsen/botInvest" target="_blank" rel="noopener">
+                    <div class="project-card__top">
+                        <span data-language="pt">Automação</span>
+                        <span data-language="en">Automation</span>
+                        <span class="project-card__arrow">↗</span>
+                    </div>
+                    <h3>Bot Invest</h3>
+                    <p>
+                        <span data-language="pt">Bot em Python para apoiar decisões de investimento a partir da análise de dados do mercado.</span>
+                        <span data-language="en">Python bot to support investment decisions through market data analysis.</span>
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag tag--accent">Python</span>
+                        <span class="tag">Automação</span>
+                        <span class="tag">Finanças</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CATEGORIA 3: CRIATIVA & SOCIAL ===================== -->
+    <section class="projects-cat">
+        <div class="container">
+            <div class="projects-cat__head reveal">
+                <h2>
+                    <span data-language="pt">Inovação &amp; Impacto</span>
+                    <span data-language="en">Innovation &amp; Impact</span>
+                </h2>
+                <span class="count">02 ·</span>
+            </div>
+
+            <div class="project-grid">
+                <article class="project-card project-card--feature reveal">
+                    <div class="project-card__top">
+                        <span data-language="pt">Produto · HealthTech</span>
+                        <span data-language="en">Product · HealthTech</span>
+                    </div>
+                    <span class="project-card__badge">★
+                        <span data-language="pt">2º lugar · Pitch Inova Skill 2025</span>
+                        <span data-language="en">2nd place · Inova Skill Pitch 2025</span>
+                    </span>
+                    <h3>SintegraXP</h3>
+                    <p>
+                        <span data-language="pt">Modelo de ensino interativo e gamificado para residentes de medicina treinarem artroscopia e medicina esportiva. Liderei como Product Owner e apresentadora, em parceria com a Síntegra Surgical Sciences, médicos residentes, preceptores e a Mentto.</span>
+                        <span data-language="en">Interactive, gamified learning model for medical residents to train arthroscopy and sports medicine. I led it as Product Owner and presenter, partnering with Síntegra Surgical Sciences, resident doctors, preceptors and Mentto.</span>
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag tag--accent">Product Owner</span>
+                        <span class="tag">Gamificação</span>
+                        <span class="tag">HealthTech</span>
+                        <span class="tag">Liderança</span>
+                    </div>
+                </article>
+
+                <a class="project-card reveal" href="https://github.com/emilytsen/tcc" target="_blank" rel="noopener">
+                    <div class="project-card__top">
+                        <span data-language="pt">Web · Causa social</span>
+                        <span data-language="en">Web · Social cause</span>
+                        <span class="project-card__arrow">↗</span>
+                    </div>
+                    <h3>Onda de Graça</h3>
+                    <p>
+                        <span data-language="pt">Sistema de blog completo para uma causa social (Wave of Grace), unindo tecnologia e impacto na comunidade.</span>
+                        <span data-language="en">Complete blog system for a social cause (Wave of Grace), bringing together technology and community impact.</span>
+                    </p>
+                    <div class="project-card__tags">
+                        <span class="tag tag--accent">Laravel</span>
+                        <span class="tag">PHP</span>
+                        <span class="tag">Social</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="projects-more grain">
+        <div class="container">
+            <h2 class="reveal">
+                <span data-language="pt">Tem muito mais no meu GitHub.</span>
+                <span data-language="en">There's a lot more on my GitHub.</span>
+            </h2>
+            <a class="cta reveal" href="https://github.com/emilytsen" target="_blank" rel="noopener">
+                <span data-language="pt">Ver todos os repositórios →</span>
+                <span data-language="en">See all repositories →</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer grain">
         <h3>
-            <span data-language="pt">
-                Meu propósito é fazer a diferença e impactar vidas por onde for através do amor.</span>
-            <span data-language="en">
-                My purpose is to make a difference and impact lives wherever I go through love.</span>
+            <span data-language="pt">Meu propósito é fazer a diferença e impactar vidas por onde for através do amor.</span>
+            <span data-language="en">My purpose is to make a difference and impact lives wherever I go through love.</span>
         </h3>
-
         <h5>
-            <span data-language="pt">
-                Ame a Deus, ame a todos.
-            </span>
-            <span data-language="en">
-                Love God, love others.
-            </span>
+            <span data-language="pt">Ame a Deus, ame a todos.</span>
+            <span data-language="en">Love God, love others.</span>
         </h5>
 
-        <h1>
-            岑
-        </h1>
-    </div>
+        <div class="social">
+            <a href="#" aria-label="Instagram"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="https://github.com/emilytsen" target="_blank" rel="noopener" aria-label="GitHub"><img src="img/github.png" alt="GitHub"></a>
+            <a href="#" aria-label="LinkedIn"><img src="img/linkedin.png" alt="LinkedIn"></a>
+        </div>
 
+        <span class="kanji" style="margin-top:48px;">岑</span>
+    </footer>
 
-
-    <script>
-        function toggleMenu(event) {
-            event.target.classList.toggle("x");
-            document.querySelector('.menu').classList.toggle("show");
-        }
-
-        function changeLanguage() {
-            if (document.querySelector('#checkBoxLanguage').checked == true) {
-                document.querySelector('body').dataset.setlanguage =
-                    'en' // .dataset.setlanguage altera o atributo data-setlanguage do elemento body.
-            } else {
-                document.querySelector('body').dataset.setlanguage = 'pt'
-            }
-        }
-    </script>
+    <script src="assets/main.js?v=2" defer></script>
 </body>
 
 </html>

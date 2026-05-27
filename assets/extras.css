@@ -1,0 +1,155 @@
+/* ============================================================
+   extras.css — específico da página Extras (vida além da tech)
+   reset / menu / footer / utilitários vivem em base.css
+   ============================================================ */
+
+/* ===================== HERO ===================== */
+.extras-hero {
+    min-height: 78vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: clamp(96px, 14vh, 200px) clamp(20px, 5vw, 64px) var(--space-2xl);
+    background-color: var(--moss);
+    color: var(--canvas);
+    position: relative;
+    overflow: hidden;
+}
+
+.extras-hero h1 {
+    font-size: var(--fs-hero);
+    line-height: 0.9;
+    text-transform: uppercase;
+}
+
+.extras-hero p {
+    font-size: var(--fs-lead);
+    max-width: 50ch;
+    margin-top: var(--space-md);
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    color: var(--summit);
+}
+
+/* ===================== MARQUEE band ===================== */
+.marquee-band {
+    background-color: var(--summit);
+    color: var(--pine);
+    padding: var(--space-md) 0;
+    border-top: 3px solid var(--pine);
+    border-bottom: 3px solid var(--pine);
+}
+
+/* ===================== BLOCO EXTRA (alternado) ===================== */
+.extra {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(32px, 6vw, 96px);
+    align-items: center;
+    padding: var(--section-pad) clamp(20px, 5vw, 64px);
+    max-width: var(--container-max);
+    margin: 0 auto;
+}
+
+.extra--reverse .extra__media {
+    order: 2;
+}
+
+.extra__media img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    object-fit: cover;
+}
+
+.extra--feature .extra__media img {
+    box-shadow: -20px 20px 0 var(--ember);
+    transform: rotate(-2deg);
+}
+
+.extra__text .eyebrow {
+    color: var(--ember);
+}
+
+.extra__text h2 {
+    font-size: var(--fs-display);
+    margin-bottom: var(--space-md);
+}
+
+.extra__text p {
+    font-size: var(--fs-lead);
+    max-width: 44ch;
+}
+
+/* ===================== INSTAGRAM ===================== */
+.insta {
+    background-color: var(--pine);
+    color: var(--canvas);
+    padding: var(--section-pad) clamp(20px, 5vw, 64px);
+    text-align: center;
+}
+
+.insta__head h2 {
+    font-size: var(--fs-display);
+    margin-bottom: var(--space-sm);
+}
+
+.insta__head p {
+    font-size: var(--fs-lead);
+    color: var(--summit);
+    font-family: var(--font-display);
+    font-style: italic;
+    margin-bottom: var(--space-xl);
+}
+
+.insta__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+    max-width: 900px;
+    margin: 0 auto var(--space-xl);
+}
+
+.insta__grid img {
+    width: 100%;
+    border-radius: var(--radius-md);
+    transition: transform 0.35s var(--ease);
+}
+
+.insta__grid img:hover {
+    transform: scale(1.04) rotate(1deg);
+}
+
+.insta .cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--ember);
+    color: var(--pine);
+    padding: 0.85em 1.6em;
+    border-radius: var(--radius-pill);
+    font-family: var(--font-display);
+    font-weight: 700;
+    transition: transform 0.3s var(--ease), background-color 0.3s var(--ease);
+}
+
+.insta .cta:hover {
+    transform: translateY(-4px);
+    background-color: var(--summit);
+}
+
+/* ===================== RESPONSIVO ===================== */
+@media screen and (max-width: 860px) {
+    .extra {
+        grid-template-columns: 1fr;
+    }
+
+    .extra__media {
+        order: -1 !important;
+        max-width: 460px;
+    }
+
+    .insta__grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

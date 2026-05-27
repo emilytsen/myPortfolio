@@ -1,13 +1,55 @@
-:root{
-    --main-color:#0A36FB;
-    --second-color:#f1a003;
-    --third-color:#f1d302;
+:root {
+    /* ===== Paleta de marca (Outdoor / Aventura) ===== */
+    --ember: #f0832c;   /* Sunfire Ember  - laranja  */
+    --canvas: #f3dab2;  /* Canvas Tent    - creme    */
+    --pine: #152b11;    /* Pine Grove     - verde escuro */
+    --summit: #d7cd62;  /* Summit Light   - amarelo  */
+    --moss: #4d6c48;    /* Moss Trail     - verde médio */
+    --sky: #bcd7ea;     /* Sky Chill      - azul claro */
+    --pine-soft: #24411d; /* variação clara do pine para cartões */
 
-    --neutral-100:#33303e;
-    --neutral-200:#4E4B59;
-    --neutral-300:#5F5C6B;
-    --neutral-400:#7A7786;
-    --neutral-500:#C6C5CE;
-    --neutral-600:#F1F0F5;
-    --white-color:#ffffff;
+    /* ===== Cores semânticas (trocar tema num lugar só) ===== */
+    --bg: var(--canvas);
+    --bg-dark: var(--pine);
+    --text: var(--pine);
+    --text-invert: var(--canvas);
+    --accent: var(--ember);
+    --accent-2: var(--summit);
+
+    /* ===== Tipografia ===== */
+    --font-display: "Fraunces", Georgia, serif;
+    --font-head: "Fraunces", Georgia, serif;
+    --font-body: "DM Sans", system-ui, -apple-system, sans-serif;
+    --font-mono: "DM Sans", monospace;
+
+    /* Escala fluida (clamp: min, preferido, max) */
+    --fs-hero: clamp(3.25rem, 13vw, 11rem);
+    --fs-display: clamp(2.5rem, 7vw, 5.5rem);
+    --fs-h1: clamp(2rem, 5vw, 3.75rem);
+    --fs-h2: clamp(1.5rem, 3.5vw, 2.5rem);
+    --fs-h3: clamp(1.25rem, 2.5vw, 1.75rem);
+    --fs-lead: clamp(1.1rem, 1.6vw, 1.4rem);
+    --fs-body: clamp(1rem, 1.2vw, 1.15rem);
+    --fs-small: 0.85rem;
+
+    /* ===== Espaçamento (escala 8px) ===== */
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 48px;
+    --space-xl: 80px;
+    --space-2xl: 112px;
+    --space-3xl: 160px;
+    --section-pad: clamp(64px, 10vw, 160px);
+    --container-max: 1280px;
+
+    /* ===== Raios (cantos arredondados estilo WILDFEAST) ===== */
+    --radius-sm: 12px;
+    --radius-md: 24px;
+    --radius-lg: 48px;
+    --radius-pill: 999px;
+
+    /* ===== Efeitos ===== */
+    --grain-opacity: 0.08;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }

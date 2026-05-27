@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <rect width="1000" height="1000" fill="#152b11"/>
+  <circle cx="500" cy="560" r="200" fill="#f3dab2"/>
+  <circle cx="500" cy="560" r="200" fill="none" stroke="#f0832c" stroke-width="14"/>
+  <circle cx="500" cy="560" r="120" fill="none" stroke="#d7cd62" stroke-width="6" opacity="0.7"/>
+  <circle cx="300" cy="360" r="90" fill="#d7cd62"/>
+  <circle cx="700" cy="360" r="90" fill="#bcd7ea"/>
+  <line x1="430" y1="200" x2="520" y2="500" stroke="#f3dab2" stroke-width="10" stroke-linecap="round"/>
+  <line x1="600" y1="210" x2="510" y2="500" stroke="#f3dab2" stroke-width="10" stroke-linecap="round"/>
+  <text x="500" y="900" font-family="Georgia, serif" font-size="40" fill="#f3dab2" text-anchor="middle" opacity="0.85">bateria</text>
+</svg>

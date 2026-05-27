@@ -1,0 +1,6 @@
+*.exe
+*.zip
+.DS_Store
+Thumbs.db
+node_modules/
+.vercel

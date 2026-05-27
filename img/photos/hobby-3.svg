@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#bcd7ea"/>
+  <circle cx="400" cy="400" r="150" fill="#f0832c" opacity="0.8"/>
+  <path d="M0 740 L260 620 L520 740 L800 600 L800 1000 L0 1000 Z" fill="#4d6c48" opacity="0.6"/>
+  <text x="400" y="900" font-family="Georgia, serif" font-size="36" fill="#152b11" text-anchor="middle" opacity="0.8">hobby photo</text>
+</svg>

@@ -1,0 +1,441 @@
+/* ============================================================
+   base.css — reset, tipografia, componentes compartilhados
+   (header, menu, switch, footer) e utilitários (marquee, badge,
+   grain, reveal). Importado por TODAS as páginas.
+   ============================================================ */
+
+@font-face {
+    font-family: "Cigra";
+    src: url("../fonts/cigra.otf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--bg);
+    overflow-x: hidden;
+}
+
+/* ===================== CURSOR bolinha (contraste automático) ===================== */
+/* só em dispositivos com mouse de verdade */
+@media (hover: hover) and (pointer: fine) {
+    body, a, button, label, input, .pill, .lines, [role="button"] {
+        cursor: none;
+    }
+}
+
+.cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    border-radius: 50%;
+    background-color: #fff;            /* branco + difference = sempre contrasta com o fundo */
+    mix-blend-mode: difference;
+    pointer-events: none;
+    z-index: 9999;
+    transition: width 0.2s var(--ease), height 0.2s var(--ease), margin 0.2s var(--ease), opacity 0.2s var(--ease);
+    will-change: transform;
+}
+
+.cursor-dot.is-hover {
+    width: 44px;
+    height: 44px;
+    margin: -22px 0 0 -22px;
+}
+
+/* ===================== Barra de progresso do scroll ===================== */
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    width: 0;
+    background-color: var(--ember);
+    z-index: 9998;
+    mix-blend-mode: difference;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--font-head);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* ===================== HEADER (preservado) ===================== */
+.webHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px clamp(20px, 4vw, 48px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    mix-blend-mode: difference;
+}
+
+.webHeader .brand {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.4rem;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+
+/* hamburger */
+.lines {
+    cursor: pointer;
+    width: max-content;
+    padding: 10px;
+}
+
+.lines::before,
+.lines::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    margin: 8px;
+    transition: 1s;
+}
+
+.lines:hover::after,
+.lines:hover::before {
+    transform: rotate(180deg);
+}
+
+.lines.x::after {
+    transform: rotate(45deg);
+    margin: -2px auto;
+}
+
+.lines.x::before {
+    transform: rotate(-45deg);
+    margin: -2px auto;
+}
+
+/* ===================== MENU FULLSCREEN (preservado) ===================== */
+.menu {
+    background-color: var(--pine);
+    opacity: 0;
+    transition: 0.7s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+}
+
+.menu.show {
+    opacity: 1;
+}
+
+.menu.show a {
+    transform: translateY(0);
+}
+
+.menu a {
+    font-family: var(--font-display);
+    color: var(--canvas);
+    letter-spacing: 2px;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    margin-top: 5px;
+    text-transform: uppercase;
+    transition: 0.7s;
+    transform: translateY(70vh);
+    display: flex;
+    align-items: baseline;
+    gap: 18px;
+}
+
+.menu a .num {
+    font-size: 0.4em;
+    color: var(--ember);
+    font-family: var(--font-body);
+    letter-spacing: 0;
+}
+
+.menu a:nth-child(2) { transition-delay: 0.3s; margin-top: 30px; }
+.menu a:nth-child(3) { transition-delay: 0.6s; margin-top: 30px; }
+.menu a:nth-child(4) { transition-delay: 0.9s; margin-top: 30px; }
+.menu a:nth-child(5) { transition-delay: 1.1s; margin-top: 30px; }
+
+.menu a:hover {
+    color: var(--summit);
+    transition: 0.2s;
+}
+
+/* ===================== SWITCH idioma (preservado) ===================== */
+.flexSwitch {
+    mix-blend-mode: difference;
+}
+
+.flexSwitch .pt {
+    margin-right: 7px;
+    color: #fff;
+}
+
+.flexSwitch .flexSwitchText {
+    color: #fff;
+}
+
+/* ===================== LAYOUT utilitário ===================== */
+.section {
+    position: relative;
+    padding: var(--section-pad) clamp(20px, 5vw, 64px);
+    overflow: hidden;
+}
+
+.section--dark {
+    background-color: var(--pine);
+    color: var(--canvas);
+}
+
+.section--moss {
+    background-color: var(--moss);
+    color: var(--canvas);
+}
+
+.section--summit {
+    background-color: var(--summit);
+    color: var(--pine);
+}
+
+.section--sky {
+    background-color: var(--sky);
+    color: var(--pine);
+}
+
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    width: 100%;
+}
+
+.eyebrow {
+    font-family: var(--font-body);
+    font-size: var(--fs-small);
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    font-weight: 700;
+    opacity: 0.7;
+    margin-bottom: var(--space-md);
+}
+
+/* ===================== MARQUEE ===================== */
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.marquee__track {
+    display: inline-flex;
+    align-items: center;
+    will-change: transform;
+    animation: marquee 28s linear infinite;
+}
+
+.marquee__track span {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 6vw, 4.5rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0 0.4em;
+}
+
+.marquee__track .dot {
+    color: var(--summit);
+}
+
+@keyframes marquee {
+    to { transform: translateX(-50%); }
+}
+
+/* ===================== BADGE / selo girando ===================== */
+.badge {
+    width: clamp(110px, 14vw, 170px);
+    height: clamp(110px, 14vw, 170px);
+    animation: spin 18s linear infinite;
+}
+
+.badge text {
+    font-family: var(--font-body);
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    fill: currentColor;
+    font-weight: 700;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ===================== GRAIN overlay ===================== */
+.grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: var(--grain-opacity);
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* ===================== REVEAL (scroll) ===================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(34px);
+    transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+}
+
+.reveal.in {
+    opacity: 1;
+    transform: none;
+}
+
+/* ===================== PILL / tag ===================== */
+.pill {
+    display: inline-block;
+    border: 2px solid currentColor;
+    border-radius: var(--radius-pill);
+    padding: 0.5em 1.2em;
+    font-family: var(--font-display);
+    font-size: clamp(1.1rem, 2.4vw, 1.9rem);
+    transition: background-color 0.3s var(--ease), color 0.3s var(--ease), transform 0.3s var(--ease);
+    cursor: pointer;
+}
+
+.pill:hover {
+    background-color: var(--ember);
+    color: var(--pine);
+    transform: translateY(-4px) rotate(-2deg);
+    border-color: var(--ember);
+}
+
+/* ===================== FOOTER (preservado, reestilizado) ===================== */
+.footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-3xl) clamp(20px, 5vw, 64px) var(--space-xl);
+    background-color: var(--pine);
+    color: var(--canvas);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer h3 {
+    font-size: var(--fs-h2);
+    font-weight: 700;
+    max-width: 18ch;
+    margin-bottom: var(--space-md);
+}
+
+.footer h5 {
+    font-size: var(--fs-h3);
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+    margin-bottom: var(--space-xl);
+    color: var(--summit);
+}
+
+.footer .kanji {
+    font-size: 3rem;
+    font-weight: normal;
+    transition: 1s;
+    color: var(--ember);
+    cursor: pointer;
+}
+
+.footer .kanji:hover {
+    transform: rotate(360deg);
+}
+
+.footer .social {
+    display: flex;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.footer .social a {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--moss);
+    border-radius: var(--radius-pill);
+    transition: 0.3s var(--ease);
+}
+
+.footer .social a:hover {
+    background-color: var(--ember);
+    transform: translateY(-4px);
+}
+
+.footer .social img {
+    width: 20px;
+    filter: brightness(0) saturate(100%) invert(92%) sepia(11%) saturate(700%) hue-rotate(330deg);
+}
+
+/* ===================== i18n ===================== */
+*[data-language] {
+    display: none;
+}
+
+body[data-setlanguage='pt'] *[data-language='pt'],
+body[data-setlanguage='en'] *[data-language='en'] {
+    display: revert;
+}
+
+/* ===================== prefers-reduced-motion ===================== */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+    .reveal { opacity: 1; transform: none; }
+}

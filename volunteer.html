@@ -5,90 +5,180 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/flex-switch.css">
-    <link rel="stylesheet" href="assets/volunteer.css">
-    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/variables.css?v=2">
+    <link rel="stylesheet" href="./assets/base.css?v=2">
+    <link rel="stylesheet" href="./assets/flex-switch.css?v=2">
+    <link rel="stylesheet" href="./assets/volunteer.css?v=2">
+    <link rel="icon" href="./img/iconSite.png">
+    <title>Volunteer · Emily Tsen</title>
 </head>
 
 <body data-setlanguage="pt">
 
+    <!-- ===================== HEADER ===================== -->
     <header class="webHeader">
+        <a href="index.html" class="brand">ET ✿</a>
 
-        <label class="flexSwitch">
-            <span class="pt">pt</span> <!-- span, texto ao lado do outro. -->
-            <input type="checkbox" id="checkBoxLanguage" onchange="changeLanguage()">
-            <!--O onchange chama a função changeLanguage toda vez que o checkbox for marcado/desmarcado.-->
-            <span class="flexSwitchText">en</span>
-        </label>
-
-        <span class="lines" onclick="toggleMenu(event)"></span>
-
+        <div style="display:flex; align-items:center; gap:24px;">
+            <label class="flexSwitch">
+                <span class="pt">pt</span>
+                <input type="checkbox" id="checkBoxLanguage">
+                <span class="flexSwitchText">en</span>
+            </label>
+            <span class="lines"></span>
+        </div>
     </header>
 
+    <!-- ===================== MENU ===================== -->
     <nav class="menu">
-        <a href="index.html">Menu</a>
-        <a href="crafts.html">Crafts</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html"><span class="num">01</span>Home</a>
+        <a href="projects.html"><span class="num">02</span>Projects</a>
+        <a href="extras.html"><span class="num">03</span>Extras</a>
+        <a href="contact.html"><span class="num">04</span>Contact</a>
     </nav>
 
-    <div class="ceramic">
-        <div class="imgv">
-            <img src="img/imgv1.png" alt="" class="i1">
-        </div>
+    <!-- ===================== HERO ===================== -->
+    <section class="vol-hero">
+        <p class="eyebrow">
+            <span data-language="pt">Servir &amp; criar</span>
+            <span data-language="en">Serve &amp; create</span>
+        </p>
+        <h1>Volunteer</h1>
+        <p>
+            <span data-language="pt">Usar a criatividade e a fé para gerar esperança e impacto onde for preciso.</span>
+            <span data-language="en">Using creativity and faith to bring hope and impact wherever it's needed.</span>
+        </p>
+    </section>
 
-        <div class="overlapText">
-            <h3>
-                <span data-language="pt">
-                    Cerâmica
-                </span>
-                <span data-language="en">
-                    Ceramic
-                </span>
-            </h3>
+    <!-- ===================== MARQUEE ===================== -->
+    <div class="marquee marquee-band">
+        <div class="marquee__track">
+            <span>Serve <span class="dot">✦</span> Create <span class="dot">✦</span> Inspire <span class="dot">✦</span> Hope <span class="dot">✦</span></span>
+            <span>Serve <span class="dot">✦</span> Create <span class="dot">✦</span> Inspire <span class="dot">✦</span> Hope <span class="dot">✦</span></span>
         </div>
     </div>
 
+    <!-- ===================== CARDS ===================== -->
+    <section class="vol-section">
+        <div class="vol-grid">
 
-    <div class="footer">
+            <!-- CLD -->
+            <article class="vol-card reveal">
+                <div class="vol-card__top">
+                    <span data-language="pt">Liderança &amp; Discipulado</span>
+                    <span data-language="en">Leadership &amp; Discipleship</span>
+                    <span class="vol-card__date">Mar – Dez 2022</span>
+                </div>
+                <h3>Word of Life Bible Institute</h3>
+                <p class="vol-card__role">CLD · Leadership and Discipleship Course</p>
+                <p>
+                    <span data-language="pt">Formação de liderança em equipe de projeto, voluntariado em escolas e comunidades carentes, e experiências de autoconhecimento e autoavaliação para o crescimento espiritual, emocional, físico e psicológico.</span>
+                    <span data-language="en">Leadership formation within a project team, volunteering in schools and needy communities, and experiences of self-knowledge and self-assessment for spiritual, emotional, physical and psychological growth.</span>
+                </p>
+                <div class="vol-card__tags">
+                    <span class="tag tag--accent">Liderança</span>
+                    <span class="tag">Discipulado</span>
+                    <span class="tag">Comunidade</span>
+                </div>
+            </article>
+
+            <!-- Wave of Grace -->
+            <article class="vol-card reveal">
+                <div class="vol-card__top">
+                    <span data-language="pt">Serviço Social</span>
+                    <span data-language="en">Social Services</span>
+                    <span class="vol-card__date">Dez 2020</span>
+                </div>
+                <h3>Wave of Grace</h3>
+                <p class="vol-card__role">
+                    <span data-language="pt">Designer</span>
+                    <span data-language="en">Designer</span>
+                </p>
+                <p>
+                    <span data-language="pt">Design de um produto para a Wave of Grace, com o objetivo de gerar lucro para uma organização social que atende crianças na Amazônia.</span>
+                    <span data-language="en">Design of a product for Wave of Grace, in order to raise profits for a social organization with children in the Amazon.</span>
+                </p>
+                <div class="vol-card__tags">
+                    <span class="tag tag--accent">Design</span>
+                    <span class="tag">Produto</span>
+                    <span class="tag">Causa Social</span>
+                </div>
+            </article>
+
+            <!-- Cerâmica Chieco Nishimura -->
+            <article class="vol-card reveal">
+                <div class="vol-card__top">
+                    <span data-language="pt">Branding · Voluntário</span>
+                    <span data-language="en">Branding · Volunteer</span>
+                </div>
+                <h3>Cerâmica Chieco Nishimura</h3>
+                <p class="vol-card__role">
+                    <span data-language="pt">Rebranding</span>
+                    <span data-language="en">Rebranding</span>
+                </p>
+                <p>
+                    <span data-language="pt">Rebranding voluntário da marca Cerâmica Chieco Nishimura — repensando identidade visual para valorizar o trabalho artesanal.</span>
+                    <span data-language="en">Volunteer rebranding for Cerâmica Chieco Nishimura — rethinking the visual identity to highlight its handcrafted work.</span>
+                </p>
+                <div class="vol-card__tags">
+                    <span class="tag tag--accent">Branding</span>
+                    <span class="tag">Design</span>
+                    <span class="tag">Identidade Visual</span>
+                </div>
+            </article>
+
+            <!-- Jesus Mold -->
+            <a class="vol-card reveal" href="#" target="_blank" rel="noopener">
+                <div class="vol-card__top">
+                    <span data-language="pt">Arte &amp; Fé</span>
+                    <span data-language="en">Art &amp; Faith</span>
+                    <span class="vol-card__arrow">↗</span>
+                </div>
+                <h3>Jesus Mold</h3>
+                <p class="vol-card__role">
+                    <span data-language="pt">Projeto pessoal &amp; voluntário</span>
+                    <span data-language="en">Personal &amp; volunteer project</span>
+                </p>
+                <p>
+                    <span data-language="pt">Instagram voluntário onde crio artes para espalhar mensagens de esperança e fé.</span>
+                    <span data-language="en">A volunteer Instagram where I create art to spread messages of hope and faith.</span>
+                </p>
+                <div class="vol-card__tags">
+                    <span class="tag tag--accent">Arte</span>
+                    <span class="tag">Instagram</span>
+                    <span class="tag">Esperança</span>
+                </div>
+            </a>
+
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer grain">
         <h3>
-            <span data-language="pt">
-                Meu propósito é fazer a diferença e impactar vidas por onde for através do amor.</span>
-            <span data-language="en">
-                My purpose is to make a difference and impact lives wherever I go through love.</span>
+            <span data-language="pt">Meu propósito é fazer a diferença e impactar vidas por onde for através do amor.</span>
+            <span data-language="en">My purpose is to make a difference and impact lives wherever I go through love.</span>
         </h3>
-
         <h5>
-            <span data-language="pt">
-                Ame a Deus, ame a todos.
-            </span>
-            <span data-language="en">
-                Love God, love others.
-            </span>
+            <span data-language="pt">Ame a Deus, ame a todos.</span>
+            <span data-language="en">Love God, love others.</span>
         </h5>
 
-        <h1>
-            岑
-        </h1>
-    </div>
+        <div class="social">
+            <a href="#" aria-label="Instagram"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="https://github.com/emilytsen" target="_blank" rel="noopener" aria-label="GitHub"><img src="img/github.png" alt="GitHub"></a>
+            <a href="#" aria-label="LinkedIn"><img src="img/linkedin.png" alt="LinkedIn"></a>
+        </div>
 
+        <span class="kanji" style="margin-top:48px;">岑</span>
+    </footer>
 
-
-    <script>
-        function toggleMenu(event) {
-            event.target.classList.toggle("x");
-            document.querySelector('.menu').classList.toggle("show");
-        }
-
-        function changeLanguage() {
-            if (document.querySelector('#checkBoxLanguage').checked == true) {
-                document.querySelector('body').dataset.setlanguage =
-                    'en' // .dataset.setlanguage altera o atributo data-setlanguage do elemento body.
-            } else {
-                document.querySelector('body').dataset.setlanguage = 'pt'
-            }
-        }
-    </script>
+    <script src="assets/main.js?v=2" defer></script>
 </body>
 
 </html>

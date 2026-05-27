@@ -24,7 +24,7 @@
     content: "";
     line-height: 1;
     display: block;
-    background-color: #ee8750;
+    background-color: var(--ember);
     border-radius: 100px;
     min-width: 40px;
     height: 20px;
@@ -47,7 +47,7 @@
 }
 
 .flexSwitch input:checked ~ .flexSwitchText::before {
-    background-color: #f4e47d;
+    background-color: var(--summit);
 }
 
 .flexSwitch input:checked ~ .flexSwitchText::after {

@@ -5,101 +5,116 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/flex-switch.css">
-    <link rel="stylesheet" href="assets/contact.css">
-    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/variables.css?v=2">
+    <link rel="stylesheet" href="./assets/base.css?v=2">
+    <link rel="stylesheet" href="./assets/flex-switch.css?v=2">
+    <link rel="stylesheet" href="./assets/contact.css?v=2">
+    <link rel="icon" href="./img/iconSite.png">
+    <title>Contact · Emily Tsen</title>
 </head>
 
 <body data-setlanguage="pt">
 
+    <!-- ===================== HEADER ===================== -->
     <header class="webHeader">
+        <a href="index.html" class="brand">ET ✿</a>
 
-        <label class="flexSwitch">
-            <span class="pt">pt</span> <!-- span, texto ao lado do outro. -->
-            <input type="checkbox" id="checkBoxLanguage" onchange="changeLanguage()">
-            <!--O onchange chama a função changeLanguage toda vez que o checkbox for marcado/desmarcado.-->
-            <span class="flexSwitchText">en</span>
-        </label>
-
-        <span class="lines" onclick="toggleMenu(event)"></span>
-
+        <div style="display:flex; align-items:center; gap:24px;">
+            <label class="flexSwitch">
+                <span class="pt">pt</span>
+                <input type="checkbox" id="checkBoxLanguage">
+                <span class="flexSwitchText">en</span>
+            </label>
+            <span class="lines"></span>
+        </div>
     </header>
 
+    <!-- ===================== MENU ===================== -->
     <nav class="menu">
-        <a href="index.html">Menu</a>
-        <a href="crafts.html">Crafts</a>
-        <a href="volunteer.html">Volunteer</a>
-        <a href="projects.html">Projects</a>
+        <a href="index.html"><span class="num">01</span>Home</a>
+        <a href="projects.html"><span class="num">02</span>Projects</a>
+        <a href="extras.html"><span class="num">03</span>Extras</a>
+        <a href="volunteer.html"><span class="num">04</span>Volunteer</a>
     </nav>
 
-    <div class="content">
-        <div class="background">
-            <img src="/img/bluebackground.png" alt="">
-            <img src="/img/greenbackground.png" alt="">
-        </div>
-
-        <!-- <h1> 
-            <span data-language="pt">
-                Vamos conversar e colaborar! 
-                Qualquer coisa já sabe onde me encontar...
-            </span>
-            <span data-language="en">
-                Let's talk and collaborate! If you need to, you already know where to find me...
-            </span>
+    <!-- ===================== HERO ===================== -->
+    <section class="contact-hero">
+        <p class="eyebrow">
+            <span data-language="pt">Bora colaborar</span>
+            <span data-language="en">Let's collaborate</span>
+        </p>
+        <h1>
+            <span data-language="pt">Vamos conversar</span>
+            <span data-language="en">Let's talk</span>
         </h1>
-       -->
+        <p>
+            <span data-language="pt">Qualquer coisa, você já sabe onde me encontrar.</span>
+            <span data-language="en">Whatever you need, you already know where to find me.</span>
+        </p>
+    </section>
 
-    </div>
+    <!-- ===================== LINKS ===================== -->
+    <section class="contact-links">
+        <ul class="contact-list">
+            <li>
+                <a href="https://www.instagram.com/emilytsenn/" target="_blank" rel="noopener" class="reveal">
+                    <span class="label">Instagram</span>
+                    <span class="handle">@emilytsenn <span class="arrow">↗</span></span>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/emilytsenn/" target="_blank" rel="noopener" class="reveal">
+                    <span class="label">LinkedIn</span>
+                    <span class="handle">in/emilytsenn <span class="arrow">↗</span></span>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/emilytsen" target="_blank" rel="noopener" class="reveal">
+                    <span class="label">GitHub</span>
+                    <span class="handle">@emilytsen <span class="arrow">↗</span></span>
+                </a>
+            </li>
+            <li>
+                <a href="mailto:emily.tsen@sintegrasurgical.com.br" class="reveal">
+                    <span class="label">Email</span>
+                    <span class="handle">emily.tsen@sintegrasurgical.com.br <span class="arrow">↗</span></span>
+                </a>
+            </li>
+        </ul>
 
+        <div class="contact-foot reveal">
+            <span data-language="pt">Marília, Brasil</span>
+            <span data-language="en">Marília, Brazil</span>
+            <span>PT · EN · ES</span>
+        </div>
+    </section>
 
-
-    <!-- <div class="web">
-        <a href="https://www.instagram.com/emilytsenn/" target="_blank"> <img class="insta" src="img/instagram.png"
-                alt=""> </a>
-        <a href="https://github.com/emilytsen" target="_blank"> <img src="img/github.png" alt=""> </a>
-        <a href="https://www.linkedin.com/in/emilytsen%E2%98%80/" target="_blank"> <img src="img/linkedin.png" alt="">
-        </a>
-    </div> -->
-
-    <div class="footer">
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer grain">
         <h3>
-            <span data-language="pt">
-                Meu propósito é fazer a diferença e impactar vidas por onde for através do amor.</span>
-            <span data-language="en">
-                My purpose is to make a difference and impact lives wherever I go through love.</span>
+            <span data-language="pt">Meu propósito é fazer a diferença e impactar vidas por onde for através do amor.</span>
+            <span data-language="en">My purpose is to make a difference and impact lives wherever I go through love.</span>
         </h3>
-
         <h5>
-            <span data-language="pt">
-                Ame a Deus, ame a todos.
-            </span>
-            <span data-language="en">
-                Love God, love others.
-            </span>
+            <span data-language="pt">Ame a Deus, ame a todos.</span>
+            <span data-language="en">Love God, love others.</span>
         </h5>
 
-        <h1>
-            岑
-        </h1>
-    </div>
+        <div class="social">
+            <a href="https://www.instagram.com/emilytsenn/" target="_blank" rel="noopener" aria-label="Instagram"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="https://github.com/emilytsen" target="_blank" rel="noopener" aria-label="GitHub"><img src="img/github.png" alt="GitHub"></a>
+            <a href="https://www.linkedin.com/in/emilytsenn/" target="_blank" rel="noopener" aria-label="LinkedIn"><img src="img/linkedin.png" alt="LinkedIn"></a>
+        </div>
 
+        <span class="kanji" style="margin-top:48px;">岑</span>
+    </footer>
 
-
-    <script>
-        function toggleMenu(event) {
-            event.target.classList.toggle("x");
-            document.querySelector('.menu').classList.toggle("show");
-        }
-
-        function changeLanguage() {
-            if (document.querySelector('#checkBoxLanguage').checked == true) {
-                document.querySelector('body').dataset.setlanguage =
-                    'en' // .dataset.setlanguage altera o atributo data-setlanguage do elemento body.
-            } else {
-                document.querySelector('body').dataset.setlanguage = 'pt'
-            }
-        }
-    </script>
+    <script src="assets/main.js?v=2" defer></script>
 </body>
 
 </html>

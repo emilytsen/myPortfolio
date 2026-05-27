@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/variables.css?v=2">
+    <link rel="stylesheet" href="./assets/base.css?v=2">
+    <link rel="stylesheet" href="./assets/flex-switch.css?v=2">
+    <link rel="stylesheet" href="./assets/extras.css?v=2">
+    <link rel="icon" href="./img/iconSite.png">
+    <title>Extras · Emily Tsen</title>
+</head>
+
+<body data-setlanguage="pt">
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="webHeader">
+        <a href="index.html" class="brand">ET ✿</a>
+
+        <div style="display:flex; align-items:center; gap:24px;">
+            <label class="flexSwitch">
+                <span class="pt">pt</span>
+                <input type="checkbox" id="checkBoxLanguage">
+                <span class="flexSwitchText">en</span>
+            </label>
+            <span class="lines"></span>
+        </div>
+    </header>
+
+    <!-- ===================== MENU ===================== -->
+    <nav class="menu">
+        <a href="index.html"><span class="num">01</span>Home</a>
+        <a href="projects.html"><span class="num">02</span>Projects</a>
+        <a href="volunteer.html"><span class="num">03</span>Volunteer</a>
+        <a href="contact.html"><span class="num">04</span>Contact</a>
+    </nav>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="extras-hero">
+        <p class="eyebrow">
+            <span data-language="pt">Além da tecnologia</span>
+            <span data-language="en">Beyond technology</span>
+        </p>
+        <h1>Extras</h1>
+        <p>
+            <span data-language="pt">O que me mantém viva fora da tela: trilhas, ar livre, argila e batidas.</span>
+            <span data-language="en">What keeps me alive away from the screen: trails, fresh air, clay and beats.</span>
+        </p>
+    </section>
+
+    <!-- ===================== MARQUEE ===================== -->
+    <div class="marquee marquee-band">
+        <div class="marquee__track">
+            <span>Trail Running <span class="dot">✦</span> Outdoor <span class="dot">✦</span> Cerâmica <span class="dot">✦</span> Bateria <span class="dot">✦</span></span>
+            <span>Trail Running <span class="dot">✦</span> Outdoor <span class="dot">✦</span> Cerâmica <span class="dot">✦</span> Bateria <span class="dot">✦</span></span>
+        </div>
+    </div>
+
+    <!-- ===================== TRAIL RUNNING (destaque) ===================== -->
+    <section class="extra extra--feature reveal">
+        <div class="extra__media">
+            <img src="img/photos/trail.svg" alt="Trail running">
+        </div>
+        <div class="extra__text">
+            <p class="eyebrow">
+                <span data-language="pt">Meu hobby nº 1</span>
+                <span data-language="en">My #1 hobby</span>
+            </p>
+            <h2>Trail Running</h2>
+            <p>
+                <span data-language="pt">Correr em trilhas é onde corpo e mente entram em equilíbrio. Cada subida é um lembrete de que o esforço e a natureza andam juntos — e é aí que eu me sinto mais eu mesma.</span>
+                <span data-language="en">Running on trails is where body and mind find balance. Every climb reminds me that effort and nature go hand in hand — and that's where I feel most like myself.</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- ===================== INSTAGRAM ===================== -->
+    <section class="insta">
+        <div class="insta__head reveal">
+            <h2>
+                <span data-language="pt">Vida ao ar livre</span>
+                <span data-language="en">Outdoor life</span>
+            </h2>
+            <p>
+                <span data-language="pt">Compartilho meu estilo de vida outdoor no Instagram.</span>
+                <span data-language="en">I share my outdoor lifestyle on Instagram.</span>
+            </p>
+        </div>
+        <div class="insta__grid reveal">
+            <img src="img/photos/outdoor-1.svg" alt="">
+            <img src="img/photos/outdoor-2.svg" alt="">
+            <img src="img/photos/outdoor-3.svg" alt="">
+        </div>
+        <a class="cta reveal" href="#" target="_blank" rel="noopener">
+            <span data-language="pt">Seguir no Instagram →</span>
+            <span data-language="en">Follow on Instagram →</span>
+        </a>
+    </section>
+
+    <!-- ===================== CERÂMICA ===================== -->
+    <section class="extra extra--reverse reveal">
+        <div class="extra__media">
+            <img src="img/photos/ceramic.svg" alt="Cerâmica">
+        </div>
+        <div class="extra__text">
+            <p class="eyebrow">
+                <span data-language="pt">Com as mãos</span>
+                <span data-language="en">With my hands</span>
+            </p>
+            <h2>
+                <span data-language="pt">Cerâmica</span>
+                <span data-language="en">Ceramics</span>
+            </h2>
+            <p>
+                <span data-language="pt">Moldar a argila é meu jeito de desacelerar e criar com calma. Da bagunça molhada a uma peça única — pura criatividade no tempo das mãos.</span>
+                <span data-language="en">Shaping clay is how I slow down and create with patience. From wet mess to a one-of-a-kind piece — pure creativity at the pace of my hands.</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- ===================== BATERIA ===================== -->
+    <section class="extra reveal">
+        <div class="extra__media">
+            <img src="img/photos/drums.svg" alt="Bateria">
+        </div>
+        <div class="extra__text">
+            <p class="eyebrow">
+                <span data-language="pt">No ritmo</span>
+                <span data-language="en">On the beat</span>
+            </p>
+            <h2>
+                <span data-language="pt">Bateria</span>
+                <span data-language="en">Drums</span>
+            </h2>
+            <p>
+                <span data-language="pt">A bateria é minha válvula de energia. Tocar é colocar para fora tudo o que sinto e entrar num estado de foco que poucas coisas me dão.</span>
+                <span data-language="en">Drumming is my energy outlet. Playing lets me release everything I feel and enter a focus state few things give me.</span>
+            </p>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer grain">
+        <h3>
+            <span data-language="pt">Meu propósito é fazer a diferença e impactar vidas por onde for através do amor.</span>
+            <span data-language="en">My purpose is to make a difference and impact lives wherever I go through love.</span>
+        </h3>
+        <h5>
+            <span data-language="pt">Ame a Deus, ame a todos.</span>
+            <span data-language="en">Love God, love others.</span>
+        </h5>
+
+        <div class="social">
+            <a href="#" aria-label="Instagram"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="https://github.com/emilytsen" target="_blank" rel="noopener" aria-label="GitHub"><img src="img/github.png" alt="GitHub"></a>
+            <a href="#" aria-label="LinkedIn"><img src="img/linkedin.png" alt="LinkedIn"></a>
+        </div>
+
+        <span class="kanji" style="margin-top:48px;">岑</span>
+    </footer>
+
+    <script src="assets/main.js?v=2" defer></script>
+</body>
+
+</html>

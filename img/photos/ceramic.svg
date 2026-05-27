@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000">
+  <rect width="1000" height="1000" fill="#f3dab2"/>
+  <ellipse cx="500" cy="760" rx="280" ry="60" fill="#4d6c48" opacity="0.4"/>
+  <path d="M360 720 Q330 460 420 380 Q380 320 460 300 Q500 250 560 300 Q620 320 580 380 Q670 460 640 720 Z" fill="#f0832c"/>
+  <path d="M360 720 Q330 460 420 380 Q380 320 460 300 Q500 250 560 300 Q620 320 580 380 Q670 460 640 720 Z" fill="none" stroke="#152b11" stroke-width="6" opacity="0.5"/>
+  <text x="500" y="900" font-family="Georgia, serif" font-size="40" fill="#152b11" text-anchor="middle" opacity="0.8">cerâmica</text>
+</svg>

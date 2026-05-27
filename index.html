@@ -5,271 +5,334 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
-    <link rel="stylesheet" href="./assets/flex-switch.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets/variables.css?v=2">
+    <link rel="stylesheet" href="./assets/base.css?v=2">
+    <link rel="stylesheet" href="./assets/flex-switch.css?v=2">
+    <link rel="stylesheet" href="./assets/home.css?v=2">
     <link rel="icon" href="./img/iconSite.png">
-    <title>Emily´s Portfolio</title>
+    <title>Emily Tsen · Portfolio</title>
 </head>
 
 <body data-setlanguage="pt">
-    <!-- TITLE -->
+
+    <!-- ===================== HEADER ===================== -->
     <header class="webHeader">
+        <a href="index.html" class="brand">ET ✿</a>
 
-        <label class="flexSwitch">
-            <span class="pt">pt</span> <!-- span, texto ao lado do outro. -->
-            <input type="checkbox" id="checkBoxLanguage" onchange="changeLanguage()">
-            <!--O onchange chama a função changeLanguage toda vez que o checkbox for marcado/desmarcado.-->
-            <span class="flexSwitchText">en</span>
-        </label>
-
-        <span class="lines" onclick="toggleMenu(event)"></span>
-
+        <div style="display:flex; align-items:center; gap:24px;">
+            <label class="flexSwitch">
+                <span class="pt">pt</span>
+                <input type="checkbox" id="checkBoxLanguage">
+                <span class="flexSwitchText">en</span>
+            </label>
+            <span class="lines"></span>
+        </div>
     </header>
 
+    <!-- ===================== MENU ===================== -->
     <nav class="menu">
-        <a href="crafts.html">Crafts</a>
-        <a href="volunteer.html">Volunteer</a>
-        <a href="projects.html">Projects</a>
-        <a href="contact.html">Contact</a>
+        <a href="projects.html"><span class="num">01</span>Projects</a>
+        <a href="extras.html"><span class="num">02</span>Extras</a>
+        <a href="volunteer.html"><span class="num">03</span>Volunteer</a>
+        <a href="contact.html"><span class="num">04</span>Contact</a>
     </nav>
 
-    <div class="boxIntro">
-        <div class="boxTitle">
-            <H1>
-                <span data-language="pt">
-                    Portfólio da Emily
-                </span>
-                <span data-language="en">
-                    Emily's Portfolio
-                </span>
-            </H1>
-            <p>
-                <span data-language="pt">
-                    Seja bem vindo a minha vida!
-                </span>
-                <span data-language="en">
-                    Welcome to my life.
-                </span>
-            </p>
+    <!-- ===================== 1. HERO ===================== -->
+    <section class="hero">
+        <div class="hero__bg">
+            <img src="img/photos/hero.svg" alt="">
         </div>
-    </div>
+        <svg class="hero__sun" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+            <circle cx="50" cy="50" r="20"/>
+            <g stroke="currentColor" stroke-width="4" stroke-linecap="round">
+                <line x1="50" y1="6" x2="50" y2="22"/>
+                <line x1="50" y1="78" x2="50" y2="94"/>
+                <line x1="6" y1="50" x2="22" y2="50"/>
+                <line x1="78" y1="50" x2="94" y2="50"/>
+                <line x1="18" y1="18" x2="30" y2="30"/>
+                <line x1="70" y1="70" x2="82" y2="82"/>
+                <line x1="82" y1="18" x2="70" y2="30"/>
+                <line x1="30" y1="70" x2="18" y2="82"/>
+            </g>
+        </svg>
 
-    <!-- CONTENT -->
-    <div class="content">
-        <div class="lineContent">
-            <div class="boxContent txt t1">
-                <h3>
-                    <span data-language="pt">
-                        Perfil
-                    </span>
-                    <span data-language="en">
-                        Profile
-                    </span>
-                </h3>
-                <p> 
-                    <span data-language="pt">
-                        Meu nome é Emily Gabriela Tsen. Sou baseada no Brasil, em uma cidade pequena chamada Marília. tenho 19 anos e amo ajudar as pessoas através da minha criatividade. 
-                    </span>
-                    <span data-language="en">
-                        My name is Emily Gabriela Tsen. I'm based in Brazil, in a small town called Marília. I'm 19 years old and I love helping people through my creativity.
-                    </span>
-                </p>
-              
-            </div>
-            <div class="boxContent img">
-                <img src="img/img1.png" alt="">
-            </div>
-            <div class="boxContent icon i1">
-                <img src="img/img2.png" alt="">
-            </div>
-            <div class="boxContent empty">
-            </div>
-        </div>
-
-
-        <div class="lineContent invert">
-            <div class="boxContent txt t2">
-                <h3>
-                    <span data-language="pt">
-                        Educação
-                    </span>
-                    <span data-language="en">
-                        Education
-                    </span>
-                </h3>
-                <div data-language="pt">
-                    <span>- Ensino médio | SENAI Shunji Nishimura </span> <br>
-                    <span>- Curso técnico de informática para internet |
-                        ETEC Antônio Devisate </span> <br>
-                    <span>- CLD | Palavra da Vida</span> <br>
-                    <span>- Faculdade de big data no agronegócio | FATEC Shunji Nishimura </span>
-                </div>
-                <div data-language="en">
-                    <span> High School | SENAI Shunji Nishimura </span> <br>
-                    <span> Technical computer course for internet | ETEC Antônio Devisate </span> <br>
-                    <span> Big data college in agribusiness | FATEC Shunji Nishimura </span><br>
-                    <span> CLD | Word of life </span>
-                </div>
-            </div>
-            <div class="boxContent img">
-                <img src="img/img4.png" alt="">
-            </div>
-            <div class="boxContent icon i2">
-                <img src="img/img3.png" alt="">
-            </div>
-            <div class="boxContent empty">
-            </div>
-        </div>
-
-
-
-        <div class="lineContent">
-            <div class="boxContent txt t3">
-                <h3>
-                    <span data-language="pt">
-                        Hobbies
-                    </span>
-                    <span data-language="en">
-                        Hobbies
-                    </span>
-                </h3>
-                <p>
-                    <span data-language="pt">
-                        Dança - <br>
-                        Yoga - <br>
-                        Bateria - <br>
-                        Artesanato - <br> 
-                        Surf - <br>
-                        Hike - <br>
-                    </span>
-                    <span data-language="en">
-                        Dance - <br>
-                        Yoga - <br>
-                        Drums - <br>
-                        Handicraft - <br> 
-                        Surf - <br>
-                        Hike - <br>
-                    </span>
-                </p>
-
-            </div>
-            <div class="boxContent img">
-                <img src="img/img5.png" alt="">
-            </div>
-            <div class="boxContent icon i3">
-                <img src="img/img6.png" alt="">
-            </div>
-            <div class="boxContent empty">
-            </div>
-        </div>
-
-
-        <div class="lineContent invert">
-            <div class="boxContent txt t4">
-                <h3>
-                    <span data-language="pt">
-                        Saúde
-                    </span>
-                    <span data-language="en">
-                        Health
-                    </span>
-                </h3>
-                <p>
-                    <span data-language="pt">
-                        Saúde não se resume somente em uma busca por cura, mas também em manter uma vida ausente de doenças. Minha maior aspiração é que por meio da tecnologia, eu possa impactar as pessoas ao meu redor e cuidar do corpo, mente e alma para um estado de equilíbrio e bem-estar de todos. 
-                    </span>
-                    <span data-language="en">
-                        Health is not just about a search for a cure, but also about maintaining a life free of disease. My biggest aspiration is that through technology, I can impact the people around me and take care of the body, mind and soul to ensure a state of balance and well-being for everyone.
-
-                    </span>
-                </p>
-            </div>
-            <div class="boxContent img">
-                <img src="img/img8.png" alt="">
-            </div>
-            <div class="boxContent icon i4">
-                <img src="img/img7.png" alt="">
-            </div>
-            <div class="boxContent empty">
-            </div>
-        </div>
-    </div>
-
-    <div class="culture">
-        <h1>
-            <span data-language="pt">
-                Cultura
-            </span>
-            <span data-language="en">
-                Culture
-            </span>
-        </h1>
-        <div class="flag">
-            <img src="img/taiwan.png" alt="">
-            <img src="img/brasil.png" alt="">
-            <img src="img/estados-unidos.png" alt="">
-        </div>
-        <p>
-            <span data-language="pt">
-                Cresci dentro de 3 culturas (taiwanesa, brasileira e estadunidense), e sou apaixonada por cada
-                oportunidade que essas diversidades me agregam. Tive o privilégio de aprender o português, o inglês, o
-                espanhol e a honra de tirar minha nacionalidade americana, além da brasileira. Graças aos meus pais, amo
-                conhecer novas culturas e costumes que fazem desse mundo um lugar tão diversificado.
-            </span>
-            <span data-language="en">
-                I grew up in 3 cultures (Taiwanese, Brazilian and American), and I am passionate about every single
-                opportunity that these cultural diversities has given to me during my life. I had the privilege of
-                learning
-                Portuguese, English, Spanish and the honor of having my American nationality, besides the Brazilian.
-                Thanks
-                to my parents, I love getting to know new cultures and customs that make this world such a diverse
-                place.
-            </span>
+        <h1 class="hero__name">Emily<br>Tsen</h1>
+        <p class="hero__tag">
+            <span data-language="pt">Criativa, analítica e esportiva — usando dados para alavancar a saúde e o bem-estar.</span>
+            <span data-language="en">Creative, analytical and sporty — using data to boost health and well-being.</span>
         </p>
+        <div class="hero__meta">
+            <span data-language="pt">Marília, Brasil</span>
+            <span data-language="en">Marília, Brazil</span>
+            <span>Big Data · Saúde · Bem-estar</span>
+            <span>EST. 2007</span>
+        </div>
+    </section>
+
+    <!-- ===================== 2. MARQUEE ===================== -->
+    <div class="marquee marquee-band">
+        <div class="marquee__track">
+            <span>Saúde <span class="dot">✦</span> Analytics <span class="dot">✦</span> Bem-estar <span class="dot">✦</span> Criatividade <span class="dot">✦</span> Outdoor <span class="dot">✦</span></span>
+            <span>Saúde <span class="dot">✦</span> Analytics <span class="dot">✦</span> Bem-estar <span class="dot">✦</span> Criatividade <span class="dot">✦</span> Outdoor <span class="dot">✦</span></span>
+        </div>
     </div>
 
-    <div class="footer">
-        <h3>
-            <span data-language="pt">
-                Meu propósito é fazer a diferença e impactar vidas por onde for através do amor.</span>
-            <span data-language="en">
-                My purpose is to make a difference and impact lives wherever I go through love.</span>
-        </h3>
+    <!-- ===================== 3. QUEM SOU ===================== -->
+    <section class="section about">
+        <div class="container about__grid">
+            <div class="about__text reveal">
+                <p class="eyebrow" data-language="pt">Quem sou</p>
+                <p class="eyebrow" data-language="en">About me</p>
+                <h2>
+                    <span data-language="pt">Oi, eu sou a Emily.</span>
+                    <span data-language="en">Hi, I'm Emily.</span>
+                </h2>
+                <p>
+                    <span data-language="pt">Meu nome é Emily Gabriela Tsen. Sou baseada no Brasil, em uma cidade pequena chamada Marília. Tenho 19 anos e amo ajudar as pessoas através da minha criatividade.</span>
+                    <span data-language="en">My name is Emily Gabriela Tsen. I'm based in Brazil, in a small town called Marília. I'm 19 years old and I love helping people through my creativity.</span>
+                </p>
+            </div>
+            <div class="about__photo reveal">
+                <img src="img/photos/profile.svg" alt="Emily Tsen">
+            </div>
+        </div>
+    </section>
 
+    <!-- ===================== 4. PILARES ===================== -->
+    <section class="section section--dark grain pillars">
+        <div class="container">
+            <div class="pillars__head reveal">
+                <p class="eyebrow">
+                    <span data-language="pt">Três naturezas, uma missão</span>
+                    <span data-language="en">Three natures, one mission</span>
+                </p>
+                <h2>
+                    <span data-language="pt">O que me move</span>
+                    <span data-language="en">What drives me</span>
+                </h2>
+            </div>
+            <div class="pillars__grid">
+                <div class="pillar reveal">
+                    <svg class="badge" viewBox="0 0 200 200" aria-hidden="true">
+                        <defs><path id="c1" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
+                        <text><textPath href="#c1" startOffset="0">CRIATIVA · CREATIVE · CRIATIVA · CREATIVE · </textPath></text>
+                        <text x="100" y="112" text-anchor="middle" font-size="34" font-family="Fraunces, serif" fill="#f0832c">✿</text>
+                    </svg>
+                    <h3>
+                        <span data-language="pt">Criativa</span>
+                        <span data-language="en">Creative</span>
+                    </h3>
+                    <p>
+                        <span data-language="pt">Resolvo problemas com imaginação — design, artesanato e ideias fora da caixa.</span>
+                        <span data-language="en">I solve problems with imagination — design, crafts and out-of-the-box ideas.</span>
+                    </p>
+                </div>
+                <div class="pillar reveal">
+                    <svg class="badge" viewBox="0 0 200 200" aria-hidden="true">
+                        <defs><path id="c2" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
+                        <text><textPath href="#c2" startOffset="0">ANALÍTICA · ANALYTICAL · ANALÍTICA · ANALYTICAL · </textPath></text>
+                        <text x="100" y="112" text-anchor="middle" font-size="34" font-family="Fraunces, serif" fill="#f0832c">▦</text>
+                    </svg>
+                    <h3>
+                        <span data-language="pt">Analítica</span>
+                        <span data-language="en">Analytical</span>
+                    </h3>
+                    <p>
+                        <span data-language="pt">Transformo dados em decisões — Big Data, padrões e curiosidade sem fim.</span>
+                        <span data-language="en">I turn data into decisions — Big Data, patterns and endless curiosity.</span>
+                    </p>
+                </div>
+                <div class="pillar reveal">
+                    <svg class="badge" viewBox="0 0 200 200" aria-hidden="true">
+                        <defs><path id="c3" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
+                        <text><textPath href="#c3" startOffset="0">ESPORTIVA · SPORTY · ESPORTIVA · SPORTY · </textPath></text>
+                        <text x="100" y="112" text-anchor="middle" font-size="34" font-family="Fraunces, serif" fill="#f0832c">⛰</text>
+                    </svg>
+                    <h3>
+                        <span data-language="pt">Esportiva</span>
+                        <span data-language="en">Sporty</span>
+                    </h3>
+                    <p>
+                        <span data-language="pt">Vivo em movimento — surf, trilha, yoga e dança mantêm corpo e mente em equilíbrio.</span>
+                        <span data-language="en">I live in motion — surf, hiking, yoga and dance keep body and mind in balance.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== 5. DADOS / SAÚDE ===================== -->
+    <section class="section section--moss data">
+        <div class="container data__grid">
+            <div class="data__text reveal">
+                <p class="eyebrow">
+                    <span data-language="pt">Dados para a saúde</span>
+                    <span data-language="en">Data for health</span>
+                </p>
+                <h2>
+                    <span data-language="pt">Tecnologia a serviço do bem-estar</span>
+                    <span data-language="en">Technology serving well-being</span>
+                </h2>
+                <p>
+                    <span data-language="pt">Saúde não se resume a uma busca por cura, mas em manter uma vida plena. Minha maior aspiração é usar a tecnologia e os dados para impactar as pessoas ao meu redor — cuidando do corpo, da mente e da alma em equilíbrio.</span>
+                    <span data-language="en">Health isn't just the search for a cure, but a full life. My biggest aspiration is to use technology and data to impact those around me — caring for body, mind and soul in balance.</span>
+                </p>
+                <div class="data__stats">
+                    <div class="data__stat">
+                        <div class="num" data-count="3">3</div>
+                        <div class="label" data-language="pt">Idiomas</div>
+                        <div class="label" data-language="en">Languages</div>
+                    </div>
+                    <div class="data__stat">
+                        <div class="num" data-count="100" data-suffix="%">100%</div>
+                        <div class="label" data-language="pt">Curiosidade</div>
+                        <div class="label" data-language="en">Curiosity</div>
+                    </div>
+                </div>
+                <a class="cta" href="projects.html">
+                    <span data-language="pt">Ver projetos →</span>
+                    <span data-language="en">View projects →</span>
+                </a>
+            </div>
+            <div class="data__viz reveal">
+                <img src="img/photos/data.svg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== 6. JORNADA / EDUCAÇÃO ===================== -->
+    <section class="section journey">
+        <div class="container">
+            <p class="eyebrow reveal">
+                <span data-language="pt">Minha jornada</span>
+                <span data-language="en">My journey</span>
+            </p>
+            <h2 class="reveal">
+                <span data-language="pt">Educação</span>
+                <span data-language="en">Education</span>
+            </h2>
+            <div class="timeline">
+                <div class="timeline__item reveal">
+                    <span class="timeline__num">01</span>
+                    <span class="timeline__title">
+                        <span data-language="pt">Ensino Médio</span>
+                        <span data-language="en">High School</span>
+                    </span>
+                    <span class="timeline__place">SENAI Shunji Nishimura</span>
+                </div>
+                <div class="timeline__item reveal">
+                    <span class="timeline__num">02</span>
+                    <span class="timeline__title">
+                        <span data-language="pt">Técnico em Informática para Internet</span>
+                        <span data-language="en">Technical course · Computing for Internet</span>
+                    </span>
+                    <span class="timeline__place">ETEC Antônio Devisate</span>
+                </div>
+                <div class="timeline__item reveal">
+                    <span class="timeline__num">03</span>
+                    <span class="timeline__title">CLD</span>
+                    <span class="timeline__place">
+                        <span data-language="pt">Palavra da Vida</span>
+                        <span data-language="en">Word of Life</span>
+                    </span>
+                </div>
+                <div class="timeline__item reveal">
+                    <span class="timeline__num">04</span>
+                    <span class="timeline__title">
+                        <span data-language="pt">Faculdade · Big Data no Agronegócio</span>
+                        <span data-language="en">College · Big Data in Agribusiness</span>
+                    </span>
+                    <span class="timeline__place">FATEC Shunji Nishimura</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== 7. HOBBIES ===================== -->
+    <section class="section section--summit hobbies">
+        <div class="container">
+            <div class="hobbies__head reveal">
+                <h2>
+                    <span data-language="pt">Em movimento</span>
+                    <span data-language="en">In motion</span>
+                </h2>
+                <p class="eyebrow">
+                    <span data-language="pt">Hobbies & esporte</span>
+                    <span data-language="en">Hobbies & sport</span>
+                </p>
+            </div>
+            <div class="hobbies__pills reveal">
+                <span class="pill"><span data-language="pt">Dança</span><span data-language="en">Dance</span></span>
+                <span class="pill">Yoga</span>
+                <span class="pill"><span data-language="pt">Bateria</span><span data-language="en">Drums</span></span>
+                <span class="pill"><span data-language="pt">Artesanato</span><span data-language="en">Handicraft</span></span>
+                <span class="pill">Surf</span>
+                <span class="pill">Hike</span>
+            </div>
+            <div class="hobbies__collage reveal">
+                <img src="img/photos/hobby-1.svg" alt="">
+                <img src="img/photos/hobby-2.svg" alt="">
+                <img src="img/photos/hobby-3.svg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== 8. CULTURA ===================== -->
+    <section class="section section--sky culture">
+        <div class="container">
+            <div class="culture__head reveal">
+                <p class="eyebrow">
+                    <span data-language="pt">Raízes</span>
+                    <span data-language="en">Roots</span>
+                </p>
+                <h2>
+                    <span data-language="pt">Cultura</span>
+                    <span data-language="en">Culture</span>
+                </h2>
+            </div>
+            <div class="flags reveal">
+                <img src="img/taiwan.png" alt="Taiwan">
+                <img src="img/brasil.png" alt="Brasil">
+                <img src="img/estados-unidos.png" alt="United States">
+            </div>
+            <p class="reveal">
+                <span data-language="pt">Cresci dentro de 3 culturas (taiwanesa, brasileira e estadunidense), e sou apaixonada por cada oportunidade que essas diversidades me agregam. Tive o privilégio de aprender o português, o inglês, o espanhol e a honra de tirar minha nacionalidade americana, além da brasileira. Graças aos meus pais, amo conhecer novas culturas e costumes que fazem desse mundo um lugar tão diversificado.</span>
+                <span data-language="en">I grew up in 3 cultures (Taiwanese, Brazilian and American), and I'm passionate about every opportunity these diversities give me. I had the privilege of learning Portuguese, English, Spanish and the honor of holding American nationality alongside the Brazilian one. Thanks to my parents, I love getting to know new cultures and customs that make this world such a diverse place.</span>
+            </p>
+            <svg class="badge culture__badge" viewBox="0 0 200 200" aria-hidden="true">
+                <defs><path id="c4" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
+                <text><textPath href="#c4" startOffset="0">RETURN TO YOUR ROOTS · RETURN TO YOUR ROOTS · </textPath></text>
+                <text x="100" y="112" text-anchor="middle" font-size="40" font-family="Fraunces, serif" fill="#4d6c48">✦</text>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ===================== 9. PROPÓSITO / FOOTER ===================== -->
+    <footer class="footer grain">
+        <h3>
+            <span data-language="pt">Meu propósito é fazer a diferença e impactar vidas por onde for através do amor.</span>
+            <span data-language="en">My purpose is to make a difference and impact lives wherever I go through love.</span>
+        </h3>
         <h5>
-            <span data-language="pt">
-                Ame a Deus, ame a todos.
-            </span>
-            <span data-language="en">
-                Love God, love others.
-            </span>
+            <span data-language="pt">Ame a Deus, ame a todos.</span>
+            <span data-language="en">Love God, love others.</span>
         </h5>
 
-        <h1>
-            岑
-        </h1>
-    </div>
+        <div class="social">
+            <a href="#" aria-label="Instagram"><img src="img/instagram.png" alt="Instagram"></a>
+            <a href="#" aria-label="GitHub"><img src="img/github.png" alt="GitHub"></a>
+            <a href="#" aria-label="LinkedIn"><img src="img/linkedin.png" alt="LinkedIn"></a>
+        </div>
 
+        <span class="kanji" style="margin-top:48px;">岑</span>
+    </footer>
 
-    <script>
-
-        function toggleMenu(event){
-            event.target.classList.toggle("x");
-            document.querySelector('.menu').classList.toggle("show");
-        }
-        //classlist: através dela se gerencia as classes de um elemento. (adiciona, remove, alterna...)
-        //toggle: função que alterna classe "x" do elemento que foi clicado. (tirar e colocar)
-
-        //document.querySelector seleciona um elemento na página.
-        function changeLanguage() {
-            if (document.querySelector('#checkBoxLanguage').checked == true) {
-                document.querySelector('body').dataset.setlanguage =
-                    'en' // .dataset.setlanguage altera o atributo data-setlanguage do elemento body.
-            } else {
-                document.querySelector('body').dataset.setlanguage = 'pt'
-            }
-        }
-    </script>
+    <script src="assets/main.js?v=2" defer></script>
 </body>
 
 </html>

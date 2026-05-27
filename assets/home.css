@@ -1,0 +1,372 @@
+/* ============================================================
+   home.css — estilos específicos da home (index.html)
+   reset / menu / footer / utilitários vivem em base.css
+   ============================================================ */
+
+/* ===================== HERO ===================== */
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: clamp(20px, 5vw, 64px);
+    color: var(--canvas);
+    overflow: hidden;
+}
+
+.hero__bg {
+    position: absolute;
+    top: -12%;
+    left: 0;
+    width: 100%;
+    height: 124%;
+    z-index: -2;
+    will-change: transform;
+}
+
+.hero__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(21, 43, 17, 0.35) 0%, rgba(21, 43, 17, 0.15) 40%, rgba(21, 43, 17, 0.75) 100%);
+}
+
+.hero__sun {
+    position: absolute;
+    top: clamp(90px, 14vh, 180px);
+    right: clamp(20px, 6vw, 90px);
+    width: clamp(70px, 9vw, 130px);
+    color: var(--summit);
+    animation: spin 40s linear infinite;
+}
+
+.hero__name {
+    font-size: var(--fs-hero);
+    line-height: 0.9;
+    text-transform: uppercase;
+    margin-bottom: var(--space-md);
+}
+
+.hero__tag {
+    font-size: var(--fs-lead);
+    max-width: 32ch;
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 500;
+}
+
+.hero__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md) var(--space-lg);
+    margin-top: var(--space-lg);
+    font-family: var(--font-body);
+    font-size: var(--fs-small);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+}
+
+/* ===================== MARQUEE band ===================== */
+.marquee-band {
+    background-color: var(--ember);
+    color: var(--pine);
+    padding: var(--space-md) 0;
+    border-top: 3px solid var(--pine);
+    border-bottom: 3px solid var(--pine);
+}
+
+/* ===================== ABOUT / quem sou ===================== */
+.about__grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: clamp(32px, 6vw, 96px);
+    align-items: center;
+}
+
+.about__text h2 {
+    font-size: var(--fs-display);
+    margin-bottom: var(--space-md);
+}
+
+.about__text p {
+    font-size: var(--fs-lead);
+    max-width: 42ch;
+}
+
+.about__photo {
+    position: relative;
+}
+
+.about__photo img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    transform: rotate(2.5deg);
+    box-shadow: -18px 18px 0 var(--summit);
+}
+
+/* ===================== PILARES ===================== */
+.pillars__head {
+    text-align: center;
+    margin-bottom: var(--space-2xl);
+}
+
+.pillars__head h2 {
+    font-size: var(--fs-display);
+}
+
+.pillars__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(32px, 5vw, 64px);
+}
+
+.pillar {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--summit);
+}
+
+.pillar h3 {
+    font-size: var(--fs-h2);
+    margin: var(--space-md) 0 var(--space-sm);
+    color: var(--canvas);
+    text-transform: uppercase;
+}
+
+.pillar p {
+    color: var(--canvas);
+    opacity: 0.8;
+    max-width: 26ch;
+}
+
+/* ===================== DADOS / saúde ===================== */
+.data__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(32px, 6vw, 96px);
+    align-items: center;
+}
+
+.data__text h2 {
+    font-size: var(--fs-display);
+    margin-bottom: var(--space-md);
+}
+
+.data__text p {
+    font-size: var(--fs-lead);
+    max-width: 44ch;
+    margin-bottom: var(--space-lg);
+}
+
+.data__stats {
+    display: flex;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-lg);
+}
+
+.data__stat .num {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1;
+    color: var(--summit);
+}
+
+.data__stat .label {
+    font-size: var(--fs-small);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    opacity: 0.85;
+}
+
+.cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--summit);
+    color: var(--pine);
+    padding: 0.85em 1.6em;
+    border-radius: var(--radius-pill);
+    font-family: var(--font-display);
+    font-weight: 700;
+    transition: transform 0.3s var(--ease), background-color 0.3s var(--ease);
+}
+
+.cta:hover {
+    transform: translateY(-4px);
+    background-color: var(--canvas);
+}
+
+.data__viz img {
+    width: 100%;
+    border-radius: var(--radius-md);
+}
+
+/* ===================== JORNADA / educação ===================== */
+.journey h2 {
+    font-size: var(--fs-display);
+    margin-bottom: var(--space-2xl);
+}
+
+.timeline {
+    border-top: 2px solid var(--pine);
+}
+
+.timeline__item {
+    display: grid;
+    grid-template-columns: 80px 1fr auto;
+    gap: var(--space-md);
+    align-items: baseline;
+    padding: var(--space-lg) 0;
+    border-bottom: 2px solid var(--pine);
+    transition: padding-left 0.4s var(--ease);
+}
+
+.timeline__item:hover {
+    padding-left: var(--space-md);
+    background: linear-gradient(90deg, rgba(240, 131, 44, 0.12), transparent);
+}
+
+.timeline__num {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    color: var(--ember);
+}
+
+.timeline__title {
+    font-family: var(--font-display);
+    font-size: var(--fs-h3);
+    font-weight: 700;
+}
+
+.timeline__place {
+    font-size: var(--fs-small);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    opacity: 0.7;
+    text-align: right;
+}
+
+/* ===================== HOBBIES ===================== */
+.hobbies__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+}
+
+.hobbies__head h2 {
+    font-size: var(--fs-display);
+}
+
+.hobbies__pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md);
+    margin-bottom: var(--space-2xl);
+}
+
+.hobbies__collage {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+}
+
+.hobbies__collage img {
+    width: 100%;
+    border-radius: var(--radius-md);
+    object-fit: cover;
+    height: 100%;
+}
+
+.hobbies__collage img:nth-child(1) { transform: rotate(-2deg); }
+.hobbies__collage img:nth-child(2) { transform: translateY(24px); }
+.hobbies__collage img:nth-child(3) { transform: rotate(2deg); }
+
+/* ===================== CULTURA ===================== */
+.culture {
+    text-align: center;
+}
+
+.culture__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.culture h2 {
+    font-size: var(--fs-display);
+}
+
+.culture .flags {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-lg);
+    margin: var(--space-xl) 0;
+    flex-wrap: wrap;
+}
+
+.culture .flags img {
+    width: clamp(56px, 8vw, 90px);
+    border-radius: var(--radius-sm);
+}
+
+.culture p {
+    font-size: var(--fs-lead);
+    max-width: 60ch;
+    margin: 0 auto;
+}
+
+.culture__badge {
+    margin-top: var(--space-xl);
+    color: var(--moss);
+}
+
+/* ===================== RESPONSIVO ===================== */
+@media screen and (max-width: 860px) {
+    .about__grid,
+    .data__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about__photo {
+        order: -1;
+        max-width: 420px;
+    }
+
+    .pillars__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .data__stats {
+        gap: var(--space-lg);
+    }
+
+    .hobbies__collage {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .hobbies__collage img:nth-child(2) { transform: none; }
+
+    .timeline__item {
+        grid-template-columns: 50px 1fr;
+    }
+
+    .timeline__place {
+        grid-column: 2;
+        text-align: left;
+    }
+}

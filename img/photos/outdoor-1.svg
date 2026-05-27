@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 600 600">
+  <rect width="600" height="600" fill="#4d6c48"/>
+  <circle cx="450" cy="160" r="60" fill="#d7cd62"/>
+  <path d="M0 420 L160 320 L320 420 L480 320 L600 380 L600 600 L0 600 Z" fill="#152b11"/>
+  <text x="300" y="540" font-family="Georgia, serif" font-size="26" fill="#f3dab2" text-anchor="middle" opacity="0.8">outdoor</text>
+</svg>
