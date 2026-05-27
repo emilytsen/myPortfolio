@@ -304,6 +304,12 @@ img {
     font-weight: 700;
 }
 
+/* ícone central (não herda o tamanho do texto circular) */
+.badge .badge__icon {
+    font-size: 72px;
+    letter-spacing: 0;
+}
+
 @keyframes spin {
     to { transform: rotate(360deg); }
 }

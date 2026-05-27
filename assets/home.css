@@ -55,6 +55,11 @@
     margin-bottom: var(--space-md);
 }
 
+.hero__line {
+    display: block;
+    will-change: transform;
+}
+
 .hero__tag {
     font-size: var(--fs-lead);
     max-width: 32ch;
@@ -134,6 +139,14 @@
     flex-direction: column;
     align-items: center;
     color: var(--summit);
+    padding: var(--space-md);
+    border-radius: var(--radius-lg);
+    transition: transform 0.4s var(--ease), background-color 0.4s var(--ease);
+}
+
+.pillar:hover {
+    transform: translateY(-10px);
+    background-color: var(--pine-soft);
 }
 
 .pillar h3 {
@@ -141,12 +154,65 @@
     margin: var(--space-md) 0 var(--space-sm);
     color: var(--canvas);
     text-transform: uppercase;
+    transition: color 0.3s var(--ease);
+}
+
+.pillar:hover h3 {
+    color: var(--ember);
 }
 
 .pillar p {
     color: var(--canvas);
     opacity: 0.8;
     max-width: 26ch;
+}
+
+.pillar__cta {
+    margin-top: var(--space-md);
+    font-family: var(--font-display);
+    font-weight: 700;
+    color: var(--summit);
+    transition: transform 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+.pillar:hover .pillar__cta {
+    color: var(--ember);
+    transform: translateX(4px);
+}
+
+/* ===================== GRÁFICO animado ===================== */
+.chart {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+.chart-bar {
+    fill: var(--summit);
+    transform-box: fill-box;
+    transform-origin: bottom;
+    animation: barPulse 3s ease-in-out infinite;
+}
+
+.chart-bar:nth-child(1) { animation-delay: 0s;    animation-duration: 3.2s; }
+.chart-bar:nth-child(2) { animation-delay: 0.25s; animation-duration: 2.8s; }
+.chart-bar:nth-child(3) { animation-delay: 0.5s;  animation-duration: 3.6s; }
+.chart-bar:nth-child(4) { animation-delay: 0.15s; animation-duration: 3.0s; }
+.chart-bar:nth-child(5) { animation-delay: 0.4s;  animation-duration: 3.4s; }
+.chart-bar:nth-child(6) { animation-delay: 0.1s;  animation-duration: 2.6s; }
+
+.chart-line {
+    transition: stroke-dashoffset 0.1s linear;
+}
+
+@keyframes barPulse {
+    0%, 100% { transform: scaleY(0.82); }
+    50%      { transform: scaleY(1); }
+}
+
+/* colagem de hobbies (separação no scroll controlada via JS) */
+.hobbies__collage img {
+    will-change: transform;
 }
 
 /* ===================== DADOS / saúde ===================== */

@@ -11,9 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;1,9..144,500&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="./assets/variables.css?v=2">
-    <link rel="stylesheet" href="./assets/base.css?v=2">
+    <link rel="stylesheet" href="./assets/base.css?v=4">
     <link rel="stylesheet" href="./assets/flex-switch.css?v=2">
-    <link rel="stylesheet" href="./assets/home.css?v=2">
+    <link rel="stylesheet" href="./assets/home.css?v=4">
     <link rel="icon" href="./img/iconSite.png">
     <title>Emily Tsen · Portfolio</title>
 </head>
@@ -61,7 +61,10 @@
             </g>
         </svg>
 
-        <h1 class="hero__name">Emily<br>Tsen</h1>
+        <h1 class="hero__name" id="heroName">
+            <span class="hero__line" data-line="1">Emily</span>
+            <span class="hero__line" data-line="2">Tsen</span>
+        </h1>
         <p class="hero__tag">
             <span data-language="pt">Criativa, analítica e esportiva — usando dados para alavancar a saúde e o bem-estar.</span>
             <span data-language="en">Creative, analytical and sporty — using data to boost health and well-being.</span>
@@ -117,51 +120,63 @@
                 </h2>
             </div>
             <div class="pillars__grid">
-                <div class="pillar reveal">
+                <a class="pillar reveal" href="extras.html">
                     <svg class="badge" viewBox="0 0 200 200" aria-hidden="true">
                         <defs><path id="c1" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
-                        <text><textPath href="#c1" startOffset="0">CRIATIVA · CREATIVE · CRIATIVA · CREATIVE · </textPath></text>
-                        <text x="100" y="112" text-anchor="middle" font-size="34" font-family="Fraunces, serif" fill="#f0832c">✿</text>
+                        <text><textPath href="#c1" startOffset="0">CRIATIVIDADE · CREATIVITY · CRIATIVIDADE · </textPath></text>
+                        <text class="badge__icon" x="100" y="124" text-anchor="middle" font-family="Fraunces, serif" fill="#f0832c">✿</text>
                     </svg>
                     <h3>
-                        <span data-language="pt">Criativa</span>
-                        <span data-language="en">Creative</span>
+                        <span data-language="pt">Criatividade</span>
+                        <span data-language="en">Creativity</span>
                     </h3>
                     <p>
-                        <span data-language="pt">Resolvo problemas com imaginação — design, artesanato e ideias fora da caixa.</span>
-                        <span data-language="en">I solve problems with imagination — design, crafts and out-of-the-box ideas.</span>
+                        <span data-language="pt">Design, artesanato e ideias fora da caixa — meu jeito de resolver problemas.</span>
+                        <span data-language="en">Design, crafts and out-of-the-box ideas — my way of solving problems.</span>
                     </p>
-                </div>
-                <div class="pillar reveal">
+                    <span class="pillar__cta">
+                        <span data-language="pt">Ver meus extras →</span>
+                        <span data-language="en">See my extras →</span>
+                    </span>
+                </a>
+                <a class="pillar reveal" href="projects.html">
                     <svg class="badge" viewBox="0 0 200 200" aria-hidden="true">
                         <defs><path id="c2" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
-                        <text><textPath href="#c2" startOffset="0">ANALÍTICA · ANALYTICAL · ANALÍTICA · ANALYTICAL · </textPath></text>
-                        <text x="100" y="112" text-anchor="middle" font-size="34" font-family="Fraunces, serif" fill="#f0832c">▦</text>
+                        <text><textPath href="#c2" startOffset="0">DADOS · DATA · DADOS · DATA · DADOS · DATA · </textPath></text>
+                        <text class="badge__icon" x="100" y="124" text-anchor="middle" font-family="Fraunces, serif" fill="#f0832c">▦</text>
                     </svg>
                     <h3>
-                        <span data-language="pt">Analítica</span>
-                        <span data-language="en">Analytical</span>
+                        <span data-language="pt">Dados</span>
+                        <span data-language="en">Data</span>
                     </h3>
                     <p>
-                        <span data-language="pt">Transformo dados em decisões — Big Data, padrões e curiosidade sem fim.</span>
-                        <span data-language="en">I turn data into decisions — Big Data, patterns and endless curiosity.</span>
+                        <span data-language="pt">Transformo dados em decisões que impactam a saúde e o bem-estar das pessoas.</span>
+                        <span data-language="en">I turn data into decisions that impact people's health and well-being.</span>
                     </p>
-                </div>
-                <div class="pillar reveal">
+                    <span class="pillar__cta">
+                        <span data-language="pt">Ver projetos →</span>
+                        <span data-language="en">See projects →</span>
+                    </span>
+                </a>
+                <a class="pillar reveal" href="volunteer.html">
                     <svg class="badge" viewBox="0 0 200 200" aria-hidden="true">
                         <defs><path id="c3" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
-                        <text><textPath href="#c3" startOffset="0">ESPORTIVA · SPORTY · ESPORTIVA · SPORTY · </textPath></text>
-                        <text x="100" y="112" text-anchor="middle" font-size="34" font-family="Fraunces, serif" fill="#f0832c">⛰</text>
+                        <text><textPath href="#c3" startOffset="0">PROPÓSITO · PURPOSE · PROPÓSITO · PURPOSE · </textPath></text>
+                        <text class="badge__icon" x="100" y="124" text-anchor="middle" font-family="Fraunces, serif" fill="#f0832c">✦</text>
                     </svg>
                     <h3>
-                        <span data-language="pt">Esportiva</span>
-                        <span data-language="en">Sporty</span>
+                        <span data-language="pt">Propósito</span>
+                        <span data-language="en">Purpose</span>
                     </h3>
                     <p>
-                        <span data-language="pt">Vivo em movimento — surf, trilha, yoga e dança mantêm corpo e mente em equilíbrio.</span>
-                        <span data-language="en">I live in motion — surf, hiking, yoga and dance keep body and mind in balance.</span>
+                        <span data-language="pt">Servir e impactar vidas por onde for, através do amor e da fé.</span>
+                        <span data-language="en">To serve and impact lives wherever I go, through love and faith.</span>
                     </p>
-                </div>
+                    <span class="pillar__cta">
+                        <span data-language="pt">Ver voluntariado →</span>
+                        <span data-language="en">See volunteer work →</span>
+                    </span>
+                </a>
             </div>
         </div>
     </section>
@@ -200,7 +215,19 @@
                 </a>
             </div>
             <div class="data__viz reveal">
-                <img src="img/photos/data.svg" alt="">
+                <svg class="chart" id="dataChart" viewBox="0 0 520 360" role="img" aria-label="Gráfico de dados">
+                    <g class="chart-bars">
+                        <rect class="chart-bar" x="40"  y="200" width="56" height="120" rx="6"/>
+                        <rect class="chart-bar" x="120" y="140" width="56" height="180" rx="6"/>
+                        <rect class="chart-bar" x="200" y="170" width="56" height="150" rx="6"/>
+                        <rect class="chart-bar" x="280" y="100" width="56" height="220" rx="6"/>
+                        <rect class="chart-bar" x="360" y="120" width="56" height="200" rx="6"/>
+                        <rect class="chart-bar" x="440" y="40"  width="56" height="280" rx="6"/>
+                    </g>
+                    <polyline id="chartLinePath" class="chart-line" fill="none" stroke="#f0832c" stroke-width="6"
+                        stroke-linecap="round" stroke-linejoin="round"
+                        points="68,180 148,120 228,150 308,80 388,100 468,20"/>
+                </svg>
             </div>
         </div>
     </section>
@@ -307,7 +334,7 @@
             <svg class="badge culture__badge" viewBox="0 0 200 200" aria-hidden="true">
                 <defs><path id="c4" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
                 <text><textPath href="#c4" startOffset="0">RETURN TO YOUR ROOTS · RETURN TO YOUR ROOTS · </textPath></text>
-                <text x="100" y="112" text-anchor="middle" font-size="40" font-family="Fraunces, serif" fill="#4d6c48">✦</text>
+                <text class="badge__icon" x="100" y="124" text-anchor="middle" font-family="Fraunces, serif" fill="#4d6c48">✦</text>
             </svg>
         </div>
     </section>
@@ -332,7 +359,7 @@
         <span class="kanji" style="margin-top:48px;">岑</span>
     </footer>
 
-    <script src="assets/main.js?v=2" defer></script>
+    <script src="assets/main.js?v=4" defer></script>
 </body>
 
 </html>

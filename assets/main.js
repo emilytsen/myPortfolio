@@ -76,17 +76,66 @@
     progress.className = "scroll-progress";
     body.appendChild(progress);
 
-    // ---------- Parallax do hero ----------
+    // ---------- Elementos de efeito de scroll ----------
     var heroBg = document.querySelector(".hero__bg");
+    var heroLine1 = document.querySelector('.hero__line[data-line="1"]');
+    var heroLine2 = document.querySelector('.hero__line[data-line="2"]');
+    var chartLine = document.getElementById("chartLinePath");
+    var chartLen = 0;
+    if (chartLine && chartLine.getTotalLength) {
+        chartLen = chartLine.getTotalLength();
+        chartLine.style.strokeDasharray = chartLen;
+        // começa "não desenhada"; se reduzir movimento, mostra inteira
+        chartLine.style.strokeDashoffset = prefersReduced ? 0 : chartLen;
+    }
+    var collage = document.querySelector(".hobbies__collage");
+    var collageImgs = collage ? collage.querySelectorAll("img") : [];
+
+    function clamp(v, min, max) { return Math.max(min, Math.min(max, v)); }
 
     function onScroll() {
         var scrollTop = window.scrollY || document.documentElement.scrollTop;
-        var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+        var vh = window.innerHeight;
+        var docHeight = document.documentElement.scrollHeight - vh;
         var pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
         progress.style.width = pct + "%";
 
-        if (heroBg && !prefersReduced && scrollTop < window.innerHeight) {
-            heroBg.style.transform = "translateY(" + scrollTop * 0.4 + "px)";
+        if (prefersReduced) return;
+
+        // parallax + nome do hero que se separa
+        if (scrollTop < vh) {
+            if (heroBg) heroBg.style.transform = "translateY(" + scrollTop * 0.4 + "px)";
+            var hp = scrollTop / vh; // 0 → 1 ao longo do hero
+            if (heroLine1) {
+                heroLine1.style.transform = "translateX(" + (-hp * 22) + "vw)";
+                heroLine1.style.opacity = (1 - hp * 0.8).toFixed(2);
+            }
+            if (heroLine2) {
+                heroLine2.style.transform = "translateX(" + (hp * 22) + "vw)";
+                heroLine2.style.opacity = (1 - hp * 0.8).toFixed(2);
+            }
+        }
+
+        // gráfico: a linha vai sendo "traçada" por cima das colunas conforme o scroll
+        if (chartLine && chartLen) {
+            var crect = chartLine.getBoundingClientRect();
+            var cprog = clamp((vh * 0.85 - crect.top) / (vh * 0.5), 0, 1); // 0 → 1
+            chartLine.style.strokeDashoffset = (chartLen * (1 - cprog)).toFixed(1);
+        }
+
+        // colagem de hobbies: aglomerada → separada no meio da tela
+        if (collageImgs.length === 3) {
+            var rect = collage.getBoundingClientRect();
+            var t = clamp((vh * 0.9 - rect.top) / (vh * 0.5), 0, 1); // 0 junto, 1 separado
+            var inv = 1 - t;
+            var w = rect.width / 3;
+            var scale = (0.72 + 0.28 * t).toFixed(3);
+            collageImgs[0].style.transform =
+                "translateX(" + (inv * w * 1.05).toFixed(1) + "px) rotate(" + (-inv * 8).toFixed(1) + "deg) scale(" + scale + ")";
+            collageImgs[1].style.transform =
+                "translateY(" + (inv * 60).toFixed(1) + "px) scale(" + scale + ")";
+            collageImgs[2].style.transform =
+                "translateX(" + (-inv * w * 1.05).toFixed(1) + "px) rotate(" + (inv * 8).toFixed(1) + "deg) scale(" + scale + ")";
         }
     }
 

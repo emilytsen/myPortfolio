@@ -78,6 +78,7 @@
     color: var(--pine);
     transition: transform 0.35s var(--ease), background-color 0.35s var(--ease), color 0.35s var(--ease);
     min-height: 280px;
+    min-width: 0;
 }
 
 .project-card:hover {
@@ -150,19 +151,18 @@
 
 /* selo de conquista / destaque */
 .project-card__badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    width: max-content;
+    display: inline-block;
+    max-width: 100%;
     background-color: var(--ember);
     color: var(--pine);
     font-family: var(--font-body);
     font-weight: 700;
     font-size: 0.7rem;
+    line-height: 1.5;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    padding: 5px 12px;
-    border-radius: var(--radius-pill);
+    padding: 5px 14px;
+    border-radius: var(--radius-sm);
     margin-bottom: var(--space-md);
 }
 
